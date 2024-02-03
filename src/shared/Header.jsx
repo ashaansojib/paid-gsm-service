@@ -1,11 +1,15 @@
 import React from 'react';
+import Marquee from './Marquee';
+import { Link, useLocation } from 'react-router-dom';
+import NavBar from './NavBar';
 
 const Header = () => {
+    const location = useLocation();
     return (
         <div>
             {/* top header content */}
             <div className='my-container border-b flex justify-between'>
-                <p>Date: 10 June, 2024</p>
+                <NavBar />
                 <div className='flex gap-2'>
                     <p>Email: ashaansojib67@gmail.com</p>
                     <p>Phone: (+880) 1892932859</p>
@@ -15,7 +19,7 @@ const Header = () => {
             <div className='my-container h-[70px] grid grid-cols-4 gap-3 justify-between items-center'>
                 {/* logo area */}
                 <div className="">
-                    <h2 className='text-xl font-semibold'>O-GSMService</h2>
+                    <h2 className='text-xl font-semibold'><Link to="/">O-GSMService</Link></h2>
                 </div>
                 {/* search box */}
                 <div className='col-span-2'>
@@ -27,6 +31,10 @@ const Header = () => {
                     <button className='px-1 py-2 bg-slate-100 rounded-sm hover:bg-blue-600 hover:text-white transition'>Dashboard</button>
                 </div>
             </div>
+            {/* ads or updating news area */}
+            {
+                location.pathname === '/' ? <Marquee /> : ''
+            }
         </div>
     );
 };
