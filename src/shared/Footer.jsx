@@ -2,8 +2,8 @@ import React from 'react';
 
 const Footer = () => {
     return (
-        <div>
-            this is footer area
+        <div className='my-container'>
+            <p className='text-center font-medium'>2024 @ Developed by O-GSMService</p>
         </div>
     );
 };

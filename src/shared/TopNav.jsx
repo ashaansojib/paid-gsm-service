@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-const NavBar = () => {
+const TopNav = () => {
     return (
         <div>
             <ul className='flex gap-2 items-center '>
@@ -13,4 +13,4 @@ const NavBar = () => {
     );
 };
 
-export default NavBar;
+export default TopNav;

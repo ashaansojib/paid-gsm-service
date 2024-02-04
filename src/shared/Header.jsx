@@ -1,7 +1,7 @@
 import React from 'react';
 import Marquee from './Marquee';
 import { Link, useLocation } from 'react-router-dom';
-import NavBar from './NavBar';
+import TopNav from './TopNav';
 
 const Header = () => {
     const location = useLocation();
@@ -9,14 +9,14 @@ const Header = () => {
         <div>
             {/* top header content */}
             <div className='my-container border-b flex justify-between'>
-                <NavBar />
+                <TopNav />
                 <div className='flex gap-2'>
                     <p>Email: ashaansojib67@gmail.com</p>
                     <p>Phone: (+880) 1892932859</p>
                 </div>
             </div>
             {/* main header area */}
-            <div className='my-container h-[70px] grid grid-cols-4 gap-3 justify-between items-center'>
+            <div className='my-container h-[100px] grid grid-cols-4 gap-3 justify-between items-center'>
                 {/* logo area */}
                 <div className="">
                     <h2 className='text-xl font-semibold'><Link to="/">O-GSMService</Link></h2>
