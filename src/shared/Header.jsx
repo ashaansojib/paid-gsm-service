@@ -1,9 +1,9 @@
 import React from 'react';
-import Marquee from './Marquee';
+import HeadingMarquee from './HeadingMarquee';
 import { Link, useLocation } from 'react-router-dom';
 import TopNav from './TopNav';
 import MenuBar from './MenuBar';
-
+import { FaEnvelope, FaPhone } from 'react-icons/fa6'
 const Header = () => {
     const location = useLocation();
     return (
@@ -11,9 +11,11 @@ const Header = () => {
             {/* top header content */}
             <div className='my-container border-b flex justify-between py-3 px-2'>
                 <TopNav />
-                <div className='flex gap-2'>
-                    <p>Email: ashaansojib67@gmail.com</p>
-                    <p>Phone: (+880) 1892932859</p>
+                <div className='flex items-center gap-2'>
+                    <FaEnvelope />
+                    <Link className='text-hover text-sm' to="mailto:ashaduzzamansojib67@gmail.com">ogsmservice@bd</Link>|
+                    <FaPhone />
+                    <p className='text-sm'>+880-1892932859</p>
                 </div>
             </div>
             {/* main header area */}
@@ -36,7 +38,7 @@ const Header = () => {
             <MenuBar />
             {/* ads or updating news area */}
             {
-                location.pathname === '/' ? <Marquee /> : ''
+                location.pathname === '/' ? <HeadingMarquee /> : ''
             }
         </div>
     );

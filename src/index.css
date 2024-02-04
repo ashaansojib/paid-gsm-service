@@ -4,6 +4,13 @@
 body{
     font-family: 'Poppins', sans-serif;
 }
+/*primary bg: #0eb131 */
 .my-container{
     @apply mx-auto max-w-screen-lg
+}
+.text-hover{
+    @apply text-gray-800 hover:text-[#0eb131]
+}
+.nav-items{
+    @apply text-white py-4 px-2 hover:bg-slate-500  border-r border-teal-300
 }

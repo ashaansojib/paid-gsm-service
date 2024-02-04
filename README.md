@@ -3,3 +3,4 @@
 * react + router
 * tailwindcss
 * npm install react-icons --save
+* npm install react-fast-marquee --save
