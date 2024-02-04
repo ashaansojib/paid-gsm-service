@@ -2,3 +2,4 @@
 ** Used are..
 * react + router
 * tailwindcss
+* npm install react-icons --save
