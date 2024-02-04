@@ -9,7 +9,7 @@ const Header = () => {
     return (
         <div>
             {/* top header content */}
-            <div className='my-container border-b flex justify-between'>
+            <div className='my-container border-b flex justify-between py-3 px-2'>
                 <TopNav />
                 <div className='flex gap-2'>
                     <p>Email: ashaansojib67@gmail.com</p>
@@ -17,7 +17,7 @@ const Header = () => {
                 </div>
             </div>
             {/* main header area */}
-            <div className='my-container h-[100px] grid grid-cols-4 gap-3 justify-between items-center'>
+            <div className='my-container h-[100px] grid grid-cols-4 px-2 gap-3 justify-between items-center'>
                 {/* logo area */}
                 <div className="">
                     <h2 className='text-xl font-semibold'><Link to="/">O-GSMService</Link></h2>
