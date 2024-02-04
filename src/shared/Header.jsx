@@ -2,6 +2,7 @@ import React from 'react';
 import Marquee from './Marquee';
 import { Link, useLocation } from 'react-router-dom';
 import TopNav from './TopNav';
+import MenuBar from './MenuBar';
 
 const Header = () => {
     const location = useLocation();
@@ -31,6 +32,8 @@ const Header = () => {
                     <button className='px-1 py-2 bg-slate-100 rounded-sm hover:bg-blue-600 hover:text-white transition'>Dashboard</button>
                 </div>
             </div>
+            {/* menu bar in header */}
+            <MenuBar />
             {/* ads or updating news area */}
             {
                 location.pathname === '/' ? <Marquee /> : ''

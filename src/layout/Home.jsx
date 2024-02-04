@@ -1,11 +1,10 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import Files from '../pages/home/Files';
 
 const Home = () => {
     return (
         <div>
-            this is home
-            <Link to='/about-us'>About us</Link>
+            <Files />
         </div>
     );
 };
