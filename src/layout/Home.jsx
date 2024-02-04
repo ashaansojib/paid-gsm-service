@@ -1,5 +1,5 @@
 import React from 'react';
-import Files from '../pages/home/Files';
+import Files from '../pages/home/files/Files';
 
 const Home = () => {
     return (
