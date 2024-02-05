@@ -16,5 +16,5 @@ img{
     @apply text-gray-800 hover:text-[#0eb131]
 }
 .nav-items{
-    @apply text-white py-4 px-2 hover:bg-slate-500  border-r border-teal-300
+    @apply text-white py-4 px-4 hover:bg-[#0eb131]  border-r border-teal-300
 }

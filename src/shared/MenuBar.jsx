@@ -10,6 +10,10 @@ const MenuBar = () => {
             <Link className="nav-items" to="/">Home</Link>
             <Link className="nav-items" to="/">Price & Packages</Link>
             <Link className="nav-items" to="/">Update Tools</Link>
+            <Link className="nav-items" to="/">Blogs</Link>
+            <Link className="nav-items" to="/">Our Agents</Link>
+            <Link className="nav-items" to="/">Request File</Link>
+            <Link className="nav-items" to="/">Contact</Link>
           </ul>
         </div>
       </div>

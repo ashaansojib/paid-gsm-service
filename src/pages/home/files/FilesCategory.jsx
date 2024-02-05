@@ -7,7 +7,7 @@ const FilesCategory = ({ singleFile }) => {
     <div className="flex gap-2 bg-white my-2">
       <div className="w-[90px]">
         <Link to="/file">
-          <img src="/files.png" alt="" />
+          <img src="/folder.png" alt="" />
         </Link>
       </div>
       <div>

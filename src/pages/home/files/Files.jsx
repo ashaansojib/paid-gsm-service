@@ -9,7 +9,7 @@ const Files = () => {
       .then((data) => getFiles(data));
   }, []);
   return (
-    <div className="my-container my-3">
+    <div className="my-container my-6">
       <h2 className="p-3 font-semibold border-b bg-slate-100">All Files Section..</h2>
       <div className="grid grid-cols-4 justify-between items-center gap-2 my-2 p-2">
         {files.map((singleFile) => (
