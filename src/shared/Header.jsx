@@ -19,10 +19,11 @@ const Header = () => {
                 </div>
             </div>
             {/* main header area */}
-            <div className='my-container h-[100px] grid grid-cols-4 px-2 gap-3 justify-between items-center'>
+            <div className='my-container h-[155px] grid grid-cols-4 px-2 gap-3 justify-between items-center'>
                 {/* logo area */}
                 <div className="">
-                    <h2 className='text-xl font-semibold'><Link to="/">O-GSMService</Link></h2>
+                    <img className='h-[132px] w-[200px]' src="/logo.png" alt="" />
+                    {/* <h2 className='text-xl font-semibold'><Link to="/">O-GSMService</Link></h2> */}
                 </div>
                 {/* search box */}
                 <div className='col-span-2'>

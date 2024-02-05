@@ -4,6 +4,10 @@
 body{
     font-family: 'Poppins', sans-serif;
 }
+img{
+    width: 100%;
+    max-width: 100%;
+}
 /*primary bg: #0eb131 */
 .my-container{
     @apply mx-auto max-w-screen-lg
