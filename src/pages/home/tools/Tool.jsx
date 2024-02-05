@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 const Tool = ({ tool }) => {
   const { title, date } = tool;
   return (
-    <div className="py-2 px-3 bg-slate-100 border mb-2 rounded-xl">
+    <div className="py-2 px-3 bg-slate-100 border mb-2 rounded-b-xl">
       <div className="flex justify-between items-end">
         <div>
           <h2 className="font-semibold">{title}</h2>

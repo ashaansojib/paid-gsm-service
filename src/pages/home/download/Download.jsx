@@ -6,8 +6,8 @@ import Review from "./Review";
 const Download = () => {
   const data = useLoaderData();
   //   console.log(data);
-  const location = useLocation()
-  console.log(location)
+  const location = useLocation();
+  console.log(location);
   return (
     <div className="my-container">
       <div className="flex gap-2 py-2">
@@ -19,7 +19,8 @@ const Download = () => {
           <p className="font-semibold text-gray-500">Go Back</p>
         </div>
       </div>
-      <div className="text-center py-8 border rounded-lg mb-4">
+      <p className="text-sm p-2 bg-slate-200 italic text-gray-800">Home / Drivers / SPD Drivers</p>
+      <div className="text-center py-8 border rounded-b-lg mb-4">
         <h1 className="text-3xl">SPD DRIVER BY GDSROM</h1>
         <div className="flex justify-center py-2">
           <FaStar className="text-orange-500" />
