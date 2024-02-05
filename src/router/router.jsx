@@ -4,6 +4,7 @@ import Home from "../layout/Home";
 import ErrorContent from "../pages/errorPage/ErrorContent";
 import AboutUs from "../pages/about/AboutUs";
 import AllTools from "../pages/home/tools/AllTools";
+import Download from "../pages/home/download/Download";
 
 const router = createBrowserRouter([
     {
@@ -21,6 +22,11 @@ const router = createBrowserRouter([
             {
                 path: '/category/:name',
                 element: <AllTools />,
+                loader: () => fetch(`/ToolData.json`)
+            },
+            {
+                path: '/download/:name',
+                element: <Download />,
                 loader: () => fetch(`/ToolData.json`)
             }
         ]

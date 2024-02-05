@@ -1,5 +1,5 @@
 import React from "react";
-import { Fa6, FaStar } from "react-icons/fa6";
+import { FaStar } from "react-icons/fa6";
 import { Link } from "react-router-dom";
 
 const Tool = ({ tool }) => {
@@ -23,7 +23,7 @@ const Tool = ({ tool }) => {
           </div>
         </div>
         <button className="py-2 px-3 bg-[#0eb131] text-white rounded-md">
-          <Link>Download</Link>
+          <Link to={`/download/${title}`}>Download</Link>
         </button>
       </div>
     </div>
