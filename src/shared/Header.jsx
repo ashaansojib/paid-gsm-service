@@ -3,7 +3,7 @@ import HeadingMarquee from './HeadingMarquee';
 import { Link, useLocation } from 'react-router-dom';
 import TopNav from './TopNav';
 import MenuBar from './MenuBar';
-import { FaEnvelope, FaPhone } from 'react-icons/fa6'
+import { FaCartArrowDown, FaEnvelope, FaPhone } from 'react-icons/fa6'
 const Header = () => {
     const location = useLocation();
     return (
@@ -31,8 +31,11 @@ const Header = () => {
                 </div>
                 {/* user profile and carts area */}
                 <div className='flex items-center justify-end gap-2'>
-                    <p>Balance: 0 BDT</p>
-                    <button className='px-1 py-2 bg-slate-100 rounded-sm hover:bg-blue-600 hover:text-white transition'>Dashboard</button>
+                    <FaCartArrowDown className='text-3xl' />
+                    <div>
+                        <span>Your Carts: </span>
+                        <p className='text-xl font-semibold'>BDT : 0.0000</p>
+                    </div>
                 </div>
             </div>
             {/* menu bar in header */}
