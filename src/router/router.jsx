@@ -3,6 +3,7 @@ import Main from "../layout/Main";
 import Home from "../layout/Home";
 import ErrorContent from "../pages/errorPage/ErrorContent";
 import AboutUs from "../pages/about/AboutUs";
+import AllTools from "../pages/home/tools/AllTools";
 
 const router = createBrowserRouter([
     {
@@ -16,6 +17,11 @@ const router = createBrowserRouter([
             {
                 path: '/about-us',
                 element: <AboutUs />
+            },
+            {
+                path: '/category/:name',
+                element: <AllTools />,
+                loader: () => fetch(`/ToolData.json`)
             }
         ]
     },

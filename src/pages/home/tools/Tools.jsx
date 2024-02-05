@@ -4,7 +4,7 @@ import ToolsCategory from "./ToolsCategory";
 const Tools = () => {
   const [tools, getTools] = useState([]);
   useEffect(() => {
-    fetch("/Files.json")
+    fetch("/ToolData.json")
       .then((res) => res.json())
       .then((data) => getTools(data));
   }, []);

@@ -14,7 +14,7 @@
   {
     "_id": "65bf3d87645f29b25ewe9670f86",
     "title": "ADB DRIVER BY GDSROM 2",
-    "category": "Drivers",
+    "category": "Flash File",
     "subCategory": "ADB Driver",
     "image": "http://placehold.it/32x32",
     "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores in laudantium dolore quod quae cum magni atque, ducimus praesentium neque aspernatur dignissimos eum, doloremque ipsam optio accusamus sit quis recusandae?",
@@ -26,7 +26,7 @@
   {
     "_id": "65bf3d87645f29b25sasdewe9670f86",
     "title": "MTK USB DRIVER",
-    "category": "Drivers",
+    "category": "Emmc File",
     "subCategory": "MTK Driver",
     "image": "http://placehold.it/32x32",
     "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores in laudantium dolore quod quae cum magni atque, ducimus praesentium neque aspernatur dignissimos eum, doloremque ipsam optio accusamus sit quis recusandae?",
@@ -36,9 +36,9 @@
     "phone": "+1 (947) 520-3417"
   },
   {
-    "_id": "65bf3d87645f29b25sawe9670f86",
+    "_id": "65bf3d87645sdf29b25sawe9670f86",
     "title": "Sony USB DRIVER 2024 Updated",
-    "category": "Drivers",
+    "category": "Tools Activation",
     "subCategory": "Sony USB Driver",
     "image": "http://placehold.it/32x32",
     "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores in laudantium dolore quod quae cum magni atque, ducimus praesentium neque aspernatur dignissimos eum, doloremque ipsam optio accusamus sit quis recusandae?",
@@ -50,7 +50,7 @@
   {
     "_id": "65bf3d87645f29b25sawe9670f86",
     "title": "SPD USB DRIVER 2024 Updated",
-    "category": "Drivers",
+    "category": "Oppo UFS",
     "subCategory": "SPD USB Driver",
     "image": "http://placehold.it/32x32",
     "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores in laudantium dolore quod quae cum magni atque, ducimus praesentium neque aspernatur dignissimos eum, doloremque ipsam optio accusamus sit quis recusandae?",
