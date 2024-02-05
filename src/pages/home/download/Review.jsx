@@ -20,7 +20,7 @@ const Review = () => {
         <h3 className="p-2 bg-green-600 rounded-sm text-white">
           You can review this file after download
         </h3>
-        <p className="py-4">Review</p>
+        <p className="pt-4">Review</p>
         <textarea className="border border-gray-400 w-full rounded-md bg-gray-200" name="" id="" cols="30" rows="10"></textarea>
         <button className="p-3 bg-green-600 rounded-md text-white">Submit</button>
       </div>
