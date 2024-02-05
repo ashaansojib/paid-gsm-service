@@ -11,7 +11,7 @@ const HeadingMarquee = () => {
       .then((data) => getFakeFiles(data));
   }, []);
   return (
-    <div className="my-container my-8 bg-slate-100 rounded-lg p-6 shadow-xl shadow-gray-300">
+    <div className="my-container my-8 bg-slate-100 rounded-lg p-6 shadow-md shadow-gray-300">
       <div className="flex items-center gap-2 mb-3">
         <button className="flex items-center gap-2 font-semibold p-2 rounded-l-full bg-emerald-600 text-white">
           <FaFile className="text-white" /> Files
