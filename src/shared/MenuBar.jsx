@@ -12,8 +12,8 @@ const MenuBar = () => {
             <Link className="nav-items" to="/category/Sony%20USB%20Driver">Update Tools</Link>
             <Link className="nav-items" to="/blogs">Blogs</Link>
             <Link className="nav-items" to="/">Our Agents</Link>
-            <Link className="nav-items" to="/">Request File</Link>
-            <Link className="nav-items" to="/">Contact</Link>
+            <Link className="nav-items" to="/user-request">Request File</Link>
+            <Link className="nav-items" to="#contact">Contact</Link>
           </ul>
         </div>
       </div>

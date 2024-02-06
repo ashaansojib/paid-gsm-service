@@ -10,7 +10,7 @@ import { Link } from "react-router-dom";
 
 const FootHead = () => {
   return (
-    <div className="py-8 bg-slate-400">
+    <div id="contact" className="py-8 bg-slate-400">
       <div className="my-container grid grid-cols-4 justify-between gap-4">
         <div>
           <img src="/logo-removebg-preview.png" alt="" />
