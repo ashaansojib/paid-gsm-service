@@ -8,7 +8,7 @@ const MenuBar = () => {
         <div>
           <ul className="flex items-center">
             <Link className="nav-items" to="/">Home</Link>
-            <Link className="nav-items" to="/">Price & Packages</Link>
+            <Link className="nav-items" to="/price">Price & Packages</Link>
             <Link className="nav-items" to="/">Update Tools</Link>
             <Link className="nav-items" to="/">Blogs</Link>
             <Link className="nav-items" to="/">Our Agents</Link>

@@ -5,6 +5,7 @@ import ErrorContent from "../pages/errorPage/ErrorContent";
 import AboutUs from "../pages/about/AboutUs";
 import AllTools from "../pages/home/tools/AllTools";
 import Download from "../pages/home/download/Download";
+import Price from "../pages/packages/Price";
 
 const router = createBrowserRouter([
     {
@@ -28,6 +29,10 @@ const router = createBrowserRouter([
                 path: '/download/:name',
                 element: <Download />,
                 loader: () => fetch(`/ToolData.json`)
+            },
+            {
+                path: '/price',
+                element: <Price />
             }
         ]
     },
