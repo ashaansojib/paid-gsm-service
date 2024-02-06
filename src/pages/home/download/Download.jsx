@@ -1,14 +1,25 @@
 import React from "react";
-import { FaStar } from "react-icons/fa6";
-import { Link, useLoaderData } from "react-router-dom";
+import { FaArrowLeft, FaStar } from "react-icons/fa6";
+import { Link, useLoaderData, useLocation } from "react-router-dom";
 import Review from "./Review";
 
 const Download = () => {
   const data = useLoaderData();
   //   console.log(data);
+  const location = useLocation()
+  console.log(location)
   return (
-    <>
-      <div className="my-container text-center py-8 border rounded-lg">
+    <div className="my-container">
+      <div className="flex gap-2 py-2">
+        <button className="text-3xl p-3 rounded-md bg-green-500 text-white">
+          <FaArrowLeft />
+        </button>
+        <div>
+          <h3 className="text-xl text-gray-800 font-semibold">SPD DRIVER</h3>
+          <p className="font-semibold text-gray-500">Go Back</p>
+        </div>
+      </div>
+      <div className="text-center py-8 border rounded-lg mb-4">
         <h1 className="text-3xl">SPD DRIVER BY GDSROM</h1>
         <div className="flex justify-center py-2">
           <FaStar className="text-orange-500" />
@@ -43,7 +54,7 @@ const Download = () => {
       </div>
       {/* reviews section */}
       <Review />
-    </>
+    </div>
   );
 };
 
