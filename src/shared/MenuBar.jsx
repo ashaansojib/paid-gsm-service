@@ -9,8 +9,8 @@ const MenuBar = () => {
           <ul className="flex items-center">
             <Link className="nav-items" to="/">Home</Link>
             <Link className="nav-items" to="/price">Price & Packages</Link>
-            <Link className="nav-items" to="/">Update Tools</Link>
-            <Link className="nav-items" to="/">Blogs</Link>
+            <Link className="nav-items" to="/category/Sony%20USB%20Driver">Update Tools</Link>
+            <Link className="nav-items" to="/blogs">Blogs</Link>
             <Link className="nav-items" to="/">Our Agents</Link>
             <Link className="nav-items" to="/">Request File</Link>
             <Link className="nav-items" to="/">Contact</Link>
