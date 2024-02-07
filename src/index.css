@@ -13,8 +13,8 @@ img{
     @apply mx-auto max-w-screen-lg
 }
 .text-hover{
-    @apply text-gray-800 hover:text-[#0eb131]
+    @apply text-gray-800 hover:text-[#211C6A]
 }
 .nav-items{
-    @apply text-white py-4 px-4 hover:bg-[#0eb131]  border-r border-teal-300
+    @apply text-white py-4 px-4 hover:bg-[#030637]  border-r
 }

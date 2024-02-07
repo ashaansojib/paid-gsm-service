@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 const MenuBar = () => {
   return (
-    <div className="bg-emerald-600 mb-2">
+    <div className="bg-[#211C6A] mb-2">
       <div className="my-container">
         <div>
           <ul className="flex items-center">

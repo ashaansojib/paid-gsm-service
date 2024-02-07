@@ -27,7 +27,7 @@ const Header = () => {
                 </div>
                 {/* search box */}
                 <div className='col-span-2'>
-                    <input className='inline-block w-full p-3 border rounded-lg border-blue-500' type="text" placeholder='Search File' name="" id="" />
+                    <input className='inline-block w-full p-3 border rounded-lg border-[#211C6A]' type="text" placeholder='Search File' name="" id="" />
                 </div>
                 {/* user profile and carts area */}
                 <div className='flex items-center justify-end gap-2'>
