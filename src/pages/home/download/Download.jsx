@@ -31,7 +31,7 @@ const Download = () => {
         </div>
         <div className="p-4">
           <p className="text-sm">SAMSUNG DRIVER BY GDSROM</p>
-          <h3 className="p-1 text-white bg-gray-400 w-1/3 rounded-md mx-auto my-2">
+          <h3 className="p-1 text-white bg-gray-400 md:w-1/3 rounded-md mx-auto my-2">
             SAMSUNG DRIVER BY GDSROM
           </h3>
           <p className="font-semibold border-b py-2 border-t">
