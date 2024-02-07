@@ -3,7 +3,7 @@ import { FaStar } from "react-icons/fa6";
 
 const Review = () => {
   return (
-    <div className="my-container">
+    <div className="my-container md:p-2 p-2">
       <button className="px-6 py-4 bg-teal-600 text-white rounded-t-md">
         Reviews
       </button>

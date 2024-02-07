@@ -2,8 +2,8 @@ import React from "react";
 
 const Request = () => {
   return (
-    <div className="py-4 my-container">
-      <div className="w-[800px]">
+    <div className="py-4 my-container md:px-0 px-2">
+      <div className="lg:w-[800px]">
         <h2 className="text-3xl font-light text-gray-800">
           Request Specific File
         </h2>
@@ -11,7 +11,7 @@ const Request = () => {
           If you need a specific file, use the from below to send message me.
         </p>
         <form action="">
-          <div className="flex justify-between gap-6 py-3">
+          <div className="md:flex justify-between gap-6 py-3">
             <div className="w-full">
               <p className="py-1 text-indigo-500">*Name</p>
               <input

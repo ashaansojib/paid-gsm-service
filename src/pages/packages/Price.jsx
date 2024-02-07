@@ -2,7 +2,7 @@ import React from "react";
 
 const Price = () => {
   return (
-    <div className="my-container grid grid-cols-3 gap-4 justify-between my-6">
+    <div className="p-2 md:p-0 my-container grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-4 justify-between my-6">
       <div className="hover:shadow-lg">
         <h2 className="p-3 mb-2 text-2xl font-semibold bg-orange-500 text-center text-white">
           12 Months Active
