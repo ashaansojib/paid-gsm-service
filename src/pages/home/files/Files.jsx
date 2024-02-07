@@ -11,7 +11,7 @@ const Files = () => {
   return (
     <div className="my-container my-6">
       <h2 className="p-3 font-semibold border-b bg-slate-100">All Files Section..</h2>
-      <div className="grid grid-cols-4 justify-between items-center gap-2 my-2 p-2">
+      <div className="grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 justify-between items-center gap-2 my-2 p-2">
         {files.map((singleFile) => (
           <FilesCategory key={singleFile._id} singleFile={singleFile} />
         ))}

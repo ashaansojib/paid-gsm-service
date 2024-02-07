@@ -8,6 +8,7 @@ import Price from "../pages/packages/Price";
 import Blogs from "../pages/blogs/Blogs";
 import Request from "../pages/userRequest/Request";
 import About from "../pages/extraPages/About";
+import Contact from "../pages/extraPages/Contact";
 
 const router = createBrowserRouter([
     {
@@ -43,6 +44,10 @@ const router = createBrowserRouter([
             {
                 path: '/about-us',
                 element: <About />
+            },
+            {
+                path: '/contact',
+                element: <Contact />
             }
         ]
     },

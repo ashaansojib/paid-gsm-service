@@ -9,7 +9,7 @@ const Header = () => {
     return (
         <div>
             {/* top header content */}
-            <div className='my-container border-b flex justify-between py-3 px-2'>
+            <div className='my-container border-b md:flex justify-between py-3 px-2 hidden'>
                 <TopNav />
                 <div className='flex items-center gap-2'>
                     <FaEnvelope />
@@ -19,7 +19,7 @@ const Header = () => {
                 </div>
             </div>
             {/* main header area */}
-            <div className='my-container h-[155px] grid grid-cols-4 px-2 gap-3 justify-between items-center'>
+            <div className='my-container md:h-[155px] grid md:grid-cols-4 grid-cols-1 px-2 gap-3 md:justify-between justify-center items-center'>
                 {/* logo area */}
                 <div className="">
                     <img className='h-[132px] w-[200px]' src="/logo.png" alt="" />
@@ -30,7 +30,7 @@ const Header = () => {
                     <input className='inline-block w-full p-3 border rounded-lg border-[#211C6A]' type="text" placeholder='Search File' name="" id="" />
                 </div>
                 {/* user profile and carts area */}
-                <div className='flex items-center justify-end gap-2'>
+                <div className='flex items-center md:justify-end gap-2'>
                     <FaCartArrowDown className='text-3xl' />
                     <div>
                         <span>Your Carts: </span>

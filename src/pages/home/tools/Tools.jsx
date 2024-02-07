@@ -13,7 +13,7 @@ const Tools = () => {
       <h2 className="p-3 font-semibold bg-slate-100 border-b">
         All Upgrade Tools..
       </h2>
-      <div className="grid grid-cols-4 justify-between items-center gap-2 p-2">
+      <div className="grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 justify-between items-center gap-2 p-2">
         {tools.map((singleFile) => (
           <ToolsCategory key={singleFile._id} singleFile={singleFile} />
         ))}
