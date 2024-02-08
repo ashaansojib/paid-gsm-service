@@ -1,13 +1,34 @@
 import React from "react";
 import { FaArrowLeft, FaStar } from "react-icons/fa6";
-import { Link, useLoaderData, useLocation } from "react-router-dom";
+import { useLoaderData, useLocation } from "react-router-dom";
 import Review from "./Review";
+import Swal from "sweetalert2";
 
 const Download = () => {
   const data = useLoaderData();
-  //   console.log(data);
+  // console.log(location);
   const location = useLocation();
-  console.log(location);
+
+  const handlePay = () => {
+    Swal.fire({
+      title: "You Have To Pay First",
+      text: "Otherwise you can't get the download link!",
+      icon: "warning",
+      showCancelButton: true,
+      confirmButtonColor: "#3085d6",
+      cancelButtonColor: "#d33",
+      confirmButtonText: "Pay Now",
+    }).then((result) => {
+      if (result.isConfirmed) {
+        Swal.fire("Link Loading!", "Your file is being ready.", "success").then(
+          () => {
+            window.location.href = location.pathname;
+          }
+        );
+      }
+    });
+  };
+
   return (
     <div className="my-container">
       <div className="flex gap-2 py-2">
@@ -19,7 +40,9 @@ const Download = () => {
           <p className="font-semibold text-gray-500">Go Back</p>
         </div>
       </div>
-      <p className="text-sm p-2 bg-slate-200 italic text-gray-800">Home / Drivers / SPD Drivers</p>
+      <p className="text-sm p-2 bg-slate-200 italic text-gray-800">
+        Home / Drivers / SPD Drivers
+      </p>
       <div className="text-center py-8 border rounded-b-lg mb-4">
         <h1 className="text-3xl">SPD DRIVER BY GDSROM</h1>
         <div className="flex justify-center py-2">
@@ -46,11 +69,12 @@ const Download = () => {
           <p className="font-semibold border-b py-2 border-t my-2">
             Downloads:- <span className="text-gray-600">450</span>
           </p>
-          <Link to="/">
-            <button className="bg-[#0eb131] p-2 w-full mt-3 rounded-md text-white">
-              Download Now
-            </button>
-          </Link>
+          <button
+            onClick={handlePay}
+            className="bg-[#0eb131] p-2 w-full mt-3 rounded-md text-white"
+          >
+            Download Now
+          </button>
         </div>
       </div>
       {/* reviews section */}

@@ -4,3 +4,4 @@
 * tailwindcss
 * npm install react-icons --save
 * npm install react-fast-marquee --save
+* npm install sweetalert2
