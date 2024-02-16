@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 const Featured = () => {
   return (
-    <div className="my-container py-6 md:p-0 p-2">
+    <div className="my-container py-6 md:px-0 px-2">
       <h2 className="text-2xl text-gray-800">Top Files</h2>
       <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 justify-between gap-3 my-3">
         <div className="text-center bg-slate-200 rounded-lg p-2">

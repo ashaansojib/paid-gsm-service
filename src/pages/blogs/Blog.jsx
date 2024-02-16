@@ -22,7 +22,7 @@ const Blog = ({ singleBlog }) => {
           accusamus repellendus nulla consectetur amet minima voluptatum eos
           reprehenderit nihil.
         </p>
-        <Link className="px-4 py-2 bg-green-500 text-white rounded-md mt-3 inline-block">Read More</Link>
+        <Link to={`/details/${title}`} className="px-4 py-2 bg-green-500 text-white rounded-md mt-3 inline-block">Read More</Link>
       </div>
     </div>
   );

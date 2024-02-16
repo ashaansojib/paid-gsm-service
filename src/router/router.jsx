@@ -9,6 +9,7 @@ import Blogs from "../pages/blogs/Blogs";
 import Request from "../pages/userRequest/Request";
 import About from "../pages/extraPages/About";
 import Contact from "../pages/extraPages/Contact";
+import BlogDetails from "../pages/blogs/BlogDetails";
 
 const router = createBrowserRouter([
     {
@@ -36,6 +37,10 @@ const router = createBrowserRouter([
             {
                 path: '/blogs',
                 element: <Blogs />
+            },
+            {
+                path: '/details/:name',
+                element: <BlogDetails />
             },
             {
                 path: '/user-request',
