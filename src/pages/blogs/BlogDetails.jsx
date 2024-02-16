@@ -2,8 +2,8 @@ import React from 'react';
 
 const BlogDetails = () => {
     return (
-        <div className='my-container'>
-            <div className='py-4 grid grid-cols-3 items-center justify-between gap-6'>
+        <div className='my-container p-4 md:p-2'>
+            <div className='grid md:grid-cols-3 grid-cols-1 items-center justify-between gap-6'>
                 <img src="https://gdsrom.com/media/products/thumbnails/2023/09/23/2-1695511274.png"
           alt="" />
           <p className='col-span-2 text-xl text-gray-700'>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cupiditate, delectus necessitatibus aliquid pariatur consectetur corrupti beatae ullam temporibus asperiores quidem adipisci dolore sapiente alias quia enim dignissimos exercitationem! Illum, enim! Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident, qui.</p>

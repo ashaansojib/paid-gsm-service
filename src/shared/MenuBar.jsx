@@ -18,7 +18,7 @@ const MenuBar = () => {
           <Link className="nav-items" to="/blogs">
             Blogs
           </Link>
-          <Link className="nav-items" to="/">
+          <Link className="nav-items" to="/reseller">
             Our Agents
           </Link>
           <Link className="nav-items" to="/user-request">

@@ -10,6 +10,7 @@ import Request from "../pages/userRequest/Request";
 import About from "../pages/extraPages/About";
 import Contact from "../pages/extraPages/Contact";
 import BlogDetails from "../pages/blogs/BlogDetails";
+import Agents from "../pages/agents/Agents";
 
 const router = createBrowserRouter([
     {
@@ -53,6 +54,10 @@ const router = createBrowserRouter([
             {
                 path: '/contact',
                 element: <Contact />
+            },
+            {
+                path: '/reseller',
+                element: <Agents />
             }
         ]
     },
