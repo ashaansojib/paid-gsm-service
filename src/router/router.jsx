@@ -13,6 +13,7 @@ import BlogDetails from "../pages/blogs/BlogDetails";
 import Agents from "../pages/agents/Agents";
 import UnlockModels from "../pages/unlockService/UnlockModels";
 import Dashboard from "../layout/Dashboard";
+import AddService from "../pages/dashboard/pages/AddService";
 
 const router = createBrowserRouter([
     {
@@ -69,7 +70,13 @@ const router = createBrowserRouter([
     },
     {
         path: '/admin',
-        element: <Dashboard />
+        element: <Dashboard />,
+        children: [
+            {
+                path: '/admin/add-services',
+                element: <AddService />
+            }
+        ]
     },
     {
         path: '*',
