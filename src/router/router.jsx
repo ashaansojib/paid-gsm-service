@@ -11,6 +11,7 @@ import About from "../pages/extraPages/About";
 import Contact from "../pages/extraPages/Contact";
 import BlogDetails from "../pages/blogs/BlogDetails";
 import Agents from "../pages/agents/Agents";
+import UnlockModels from "../pages/unlockService/UnlockModels";
 
 const router = createBrowserRouter([
     {
@@ -58,6 +59,10 @@ const router = createBrowserRouter([
             {
                 path: '/reseller',
                 element: <Agents />
+            },
+            {
+                path: '/unlocking-services',
+                element: <UnlockModels />
             }
         ]
     },
