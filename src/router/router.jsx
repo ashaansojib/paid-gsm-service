@@ -12,6 +12,7 @@ import Contact from "../pages/extraPages/Contact";
 import BlogDetails from "../pages/blogs/BlogDetails";
 import Agents from "../pages/agents/Agents";
 import UnlockModels from "../pages/unlockService/UnlockModels";
+import Dashboard from "../layout/Dashboard";
 
 const router = createBrowserRouter([
     {
@@ -64,7 +65,11 @@ const router = createBrowserRouter([
                 path: '/unlocking-services',
                 element: <UnlockModels />
             }
-        ]
+       ]
+    },
+    {
+        path: '/admin',
+        element: <Dashboard />
     },
     {
         path: '*',

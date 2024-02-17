@@ -32,10 +32,10 @@ const Header = () => {
                 {/* user profile and carts area */}
                 <div className='flex items-center md:justify-end gap-2'>
                     <FaCartArrowDown className='text-3xl' />
-                    <div>
+                    <Link to="/admin">
                         <span>Your Carts: </span>
                         <p className='text-xl font-semibold'>BDT : 0.0000</p>
-                    </div>
+                    </Link>
                 </div>
             </div>
             {/* menu bar in header */}
