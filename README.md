@@ -6,3 +6,4 @@
 * npm install react-fast-marquee --save
 * npm install sweetalert2
 * npm install @headlessui/react
+* npm i -D daisyui@latest

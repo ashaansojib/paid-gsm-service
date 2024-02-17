@@ -6,7 +6,7 @@ const UnlockModels = () => {
     return (
         <div className="bg-slate-200 p-4">
             <div className='my-container bg-white p-4 rounded-md'>
-                <div className='flex justify-between items-center border p-3'>
+                <div className='md:flex justify-between items-center border p-3'>
                     <p>Chooses Your Services Now!</p>
                     <div className='flex gap-2'>
                         <BrandList />

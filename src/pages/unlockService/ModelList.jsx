@@ -2,22 +2,32 @@ import React from 'react';
 
 const ModelList = () => {
     return (
-        <table className='w-full'>
-            <thead>
-                <tr className='grid grid-cols-4 justify-start text-left bg-slate-100'>
-                    <th className='border p-2'>Model</th>
-                    <th className='border p-2'>CodeName</th>
-                    <th className='col-span-2 border p-2'>Supports</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr className='grid grid-cols-4 justify-start text-left bg-slate-100'>
-                    <th>Oppo</th>
-                    <th>CPH2021</th>
-                    <th>FRP_Reset, Password Unlock</th>
-                </tr>
-            </tbody>
-        </table>
+        <div className="">
+            <table className="table">
+                {/* head */}
+                <thead className='bg-slate-100'>
+                    <tr className='grid grid-cols-4 '>
+                        <th>Models</th>
+                        <th>CodeName</th>
+                        <th className='col-span-2'>Supports</th>
+                    </tr>
+                </thead>
+                <tbody className=''>
+                    {/* row 1 */}
+                    <tr className='grid grid-cols-4 mb-1'>
+                        <td className='border'>Oppo</td>
+                        <td className='border'>A9 2024</td>
+                        <td className='border col-span-2'>Frp, Unlcok</td>
+                    </tr>
+                    {/* row 1 */}
+                    <tr className='grid grid-cols-4 mb-1'>
+                        <td className='border'>Xioami</td>
+                        <td className='border'>X9 pro</td>
+                        <td className='border col-span-2'>Frp, Mi unlock</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
     );
 };
 
