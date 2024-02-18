@@ -1,33 +1,35 @@
 import React from "react";
 import { FaArrowLeft, FaStar } from "react-icons/fa6";
-import { useLoaderData, useLocation } from "react-router-dom";
+import { useLoaderData, useNavigate } from "react-router-dom";
 import Review from "./Review";
 import Swal from "sweetalert2";
+import { useEffect } from "react";
+import { useState } from "react";
 
 const Download = () => {
   const data = useLoaderData();
   // console.log(location);
-  const location = useLocation();
+  const location = useNavigate();
 
-  const handlePay = () => {
-    Swal.fire({
-      title: "You Have To Pay First",
-      text: "Otherwise you can't get the download link!",
-      icon: "warning",
-      showCancelButton: true,
-      confirmButtonColor: "#3085d6",
-      cancelButtonColor: "#d33",
-      confirmButtonText: "Pay Now",
-    }).then((result) => {
-      if (result.isConfirmed) {
-        Swal.fire("Link Loading!", "Your file is being ready.", "success").then(
-          () => {
-            window.location.href = location.pathname;
-          }
-        );
-      }
-    });
-  };
+  // const handlePay = () => {
+  //   Swal.fire({
+  //     title: "You Have To Pay First",
+  //     text: "Otherwise you can't get the download link!",
+  //     icon: "warning",
+  //     showCancelButton: true,
+  //     confirmButtonColor: "#3085d6",
+  //     cancelButtonColor: "#d33",
+  //     confirmButtonText: "Pay Now",
+  //   }).then((result) => {
+  //     if (result.isConfirmed) {
+  //       Swal.fire("Link Loading!", "Your file is being ready.", "success").then(
+  //         () => {
+  //           window.location.href = location.pathname;
+  //         }
+  //       );
+  //     }
+  //   });
+  // };
 
   return (
     <div className="my-container">
@@ -69,8 +71,7 @@ const Download = () => {
           <p className="font-semibold border-b py-2 border-t my-2">
             Downloads:- <span className="text-gray-600">450</span>
           </p>
-          <button
-            onClick={handlePay}
+          <button onClick={()=> handleDownload()}
             className="bg-[#0eb131] p-2 w-full mt-3 rounded-md text-white"
           >
             Download Now

@@ -7,3 +7,4 @@
 * npm install sweetalert2
 * npm install @headlessui/react
 * npm i -D daisyui@latest
+* npm install sweetalert --save

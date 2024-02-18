@@ -1,6 +1,10 @@
 import React from 'react';
+import swal from 'sweetalert';
 
 const CreatePost = () => {
+    const handlePublished = () => {
+        swal("Good job!", "The post has been published!", "success");
+    }
     return (
         <div>
             <h2 className='p-4 mb-2 bg-slate-100 font-semibold'>Write your post info then published :-</h2>
@@ -14,7 +18,7 @@ const CreatePost = () => {
             <div className='grid md:grid-cols-2 grid-cols-1 justify-between gap-3 items-center'>
                 <input type="text" placeholder="Category" className="input input-bordered w-full" />
                 <input type="text" placeholder="Download Link" className="input input-bordered w-full" />
-                <button className="btn btn-wide">Published</button>
+                <button onClick={handlePublished} className="btn btn-wide">Published</button>
             </div>
         </div>
     );

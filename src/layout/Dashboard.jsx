@@ -4,10 +4,32 @@ import AdminSidebar from '../pages/dashboard/AdminSidebar';
 import AdminFooter from '../pages/dashboard/AdminFooter';
 import { Outlet, useLocation } from 'react-router-dom';
 import { FaBars } from 'react-icons/fa6';
+import swal from 'sweetalert';
 
 const Dashboard = () => {
     const [showAside, setShowAside] = useState(true);
     const location = useLocation();
+
+    // comfirm delete alert
+    const handleDelatePost = () => {
+        swal({
+            title: "Are you sure?",
+            text: "Once deleted, you will not be able to recover this post!",
+            icon: "warning",
+            buttons: true,
+            dangerMode: true,
+        })
+            .then((willDelete) => {
+                if (willDelete) {
+                    swal("The post has been permanently removed from the server!", {
+                        icon: "success",
+                    });
+                } else {
+                    swal("You don't want to delete it?");
+                }
+            });
+    }
+
     return (
         <div>
             <AdminHeader />
@@ -46,8 +68,8 @@ const Dashboard = () => {
                                                 <td>Hart Hagerty</td>
                                                 <td>Desktop Support Technician</td>
                                                 <td>
-                                                    <button className="btn btn-outline btn-primary btn-xs mr-1">Edit</button>
-                                                    <button className="btn btn-outline btn-primary btn-xs">Delete</button>
+                                                    <button className="btn btn-outline btn-xs mr-1">Edit</button>
+                                                    <button onClick={handleDelatePost} className="btn btn-outline btn-xs">Delete</button>
                                                 </td>
                                             </tr>
                                             <tr className="hover">
@@ -55,8 +77,8 @@ const Dashboard = () => {
                                                 <td>Hart Hagerty</td>
                                                 <td>Desktop Support Technician</td>
                                                 <td>
-                                                    <button className="btn btn-outline btn-primary btn-xs mr-1">Edit</button>
-                                                    <button className="btn btn-outline btn-primary btn-xs">Delete</button>
+                                                    <button className="btn btn-outline btn-xs mr-1">Edit</button>
+                                                    <button onClick={handleDelatePost} className="btn btn-outline btn-xs">Delete</button>
                                                 </td>
                                             </tr>
                                         </tbody>
@@ -97,8 +119,8 @@ const Dashboard = () => {
                                                 <td>Hart Hagerty</td>
                                                 <td>Desktop Support Technician</td>
                                                 <td>
-                                                    <button className="btn btn-outline btn-primary btn-xs mr-1">Edit</button>
-                                                    <button className="btn btn-outline btn-primary btn-xs">Delete</button>
+                                                    <button className="btn btn-outline btn-xs mr-1">Edit</button>
+                                                    <button onClick={handleDelatePost} className="btn btn-outline btn-xs">Delete</button>
                                                 </td>
                                             </tr>
                                             <tr className="hover">
@@ -106,8 +128,8 @@ const Dashboard = () => {
                                                 <td>Hart Hagerty</td>
                                                 <td>Desktop Support Technician</td>
                                                 <td>
-                                                    <button className="btn btn-outline btn-primary btn-xs mr-1">Edit</button>
-                                                    <button className="btn btn-outline btn-primary btn-xs">Delete</button>
+                                                    <button className="btn btn-outline btn-xs mr-1">Edit</button>
+                                                    <button onClick={handleDelatePost} className="btn btn-outline btn-xs">Delete</button>
                                                 </td>
                                             </tr>
                                         </tbody>
