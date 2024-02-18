@@ -18,3 +18,6 @@ img{
 .nav-items{
     @apply text-white py-4 px-4 hover:bg-[#030637]  md:border-r
 }
+.table :where(th, td){
+    @apply pl-0 pr-0 md:pl-4 md:pr-4
+}

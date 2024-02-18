@@ -3,6 +3,7 @@ import React from 'react';
 const CreatePost = () => {
     return (
         <div>
+            <h2 className='p-4 mb-2 bg-slate-100 font-semibold'>Write your post info then published :-</h2>
             <input type="text" placeholder="Write the full title with details" className="input border-red-500 input-bordered w-full" />
             <div className='grid md:grid-cols-2 grid-cols-1 justify-between items-center gap-2 py-2'>
                 <textarea className="textarea textarea-bordered" placeholder="Top Description"></textarea>
