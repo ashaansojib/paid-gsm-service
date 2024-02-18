@@ -14,6 +14,7 @@ import Agents from "../pages/agents/Agents";
 import UnlockModels from "../pages/unlockService/UnlockModels";
 import Dashboard from "../layout/Dashboard";
 import AddService from "../pages/dashboard/pages/AddService";
+import CreatePost from "../pages/dashboard/pages/CreatePost";
 
 const router = createBrowserRouter([
     {
@@ -75,6 +76,10 @@ const router = createBrowserRouter([
             {
                 path: '/admin/add-services',
                 element: <AddService />
+            },
+            {
+                path: '/admin/create-post',
+                element: <CreatePost />
             }
         ]
     },

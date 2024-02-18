@@ -5,7 +5,6 @@ const AdminHeader = () => {
     return (
         <div className='bg-slate-200 p-3'>
             <div className="my-container">
-                {/* <FaBars className='text-xl' /> */}
                 <ul>
                     <Link to="/admin">Dashboard</Link>
                 </ul>
