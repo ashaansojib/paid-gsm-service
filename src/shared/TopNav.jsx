@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 const TopNav = () => {
   return (
-    <div className="space-x-4 text-gray-300">
+    <div className="space-x-4 text-gray-300 md:block hidden">
       <Link className="text-sm hover:text-white" to="about-us">
         About Us
       </Link>

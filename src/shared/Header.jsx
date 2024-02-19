@@ -1,5 +1,5 @@
 import React from "react";
-import { useLocation } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import TopNav from "./TopNav";
 import MenuBar from "./MenuBar";
 import HeroSection from "./HeroSection";
@@ -9,8 +9,8 @@ const Header = () => {
     <div>
       {/* top header content */}
       <div className="bg-[#24272B]">
-        <div className="my-container md:flex justify-between items-center py-4 px-2 hidden">
-          <h2 className="text-white text-2xl italic">O-GsmService</h2>
+        <div className="my-container flex justify-between items-center py-4 px-2">
+          <Link to="/"><h2 className="text-white text-2xl italic">O-GsmService</h2></Link>
           <TopNav />
         </div>
       </div>
