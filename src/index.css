@@ -12,10 +12,15 @@ img{
 .my-container{
     @apply mx-auto max-w-screen-lg
 }
-
-.nav-items{
-    @apply text-white py-4 px-4 hover:bg-[#030637]  md:border-r
+.active{
+   @apply text-blue-600 md:py-4 py-2 text-sm hover:text-gray-500
 }
+.default{
+    @apply text-gray-200 md:py-4 py-2 text-sm hover:text-gray-500
+}
+/* .nav-items{
+    @apply 
+} */
 .table :where(th, td){
     @apply pl-0 pr-0 md:pl-4 md:pr-4
 }
