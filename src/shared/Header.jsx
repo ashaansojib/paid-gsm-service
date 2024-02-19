@@ -1,8 +1,8 @@
 import React from "react";
-import HeadingMarquee from "./HeadingMarquee";
 import { useLocation } from "react-router-dom";
 import TopNav from "./TopNav";
 import MenuBar from "./MenuBar";
+import HeroSection from "./HeroSection";
 const Header = () => {
   const location = useLocation();
   return (
@@ -17,7 +17,7 @@ const Header = () => {
       {/* menu bar in header */}
       <MenuBar />
       {/* ads or updating news area */}
-      {location.pathname === "/" ? <HeadingMarquee /> : ""}
+      {location.pathname === "/" ? <HeroSection /> : ""}
     </div>
   );
 };
