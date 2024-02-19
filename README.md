@@ -8,3 +8,5 @@
 * npm install @headlessui/react
 * npm i -D daisyui@latest
 * npm install sweetalert --save
+* npm i aos
+* npm install swiper
