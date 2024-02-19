@@ -1,40 +1,31 @@
 import React from "react";
-import { FaArrowLeft, FaStar } from "react-icons/fa6";
-import { useLoaderData, useNavigate } from "react-router-dom";
+import {
+  FaAngleRight,
+  FaArrowLeft,
+  FaHouseChimney,
+  FaStar,
+} from "react-icons/fa6";
+import { Link, useLoaderData, useNavigate } from "react-router-dom";
 import Review from "./Review";
-import Swal from "sweetalert2";
-import { useEffect } from "react";
-import { useState } from "react";
+import swal from "sweetalert";
 
 const Download = () => {
   const data = useLoaderData();
-  // console.log(location);
-  const location = useNavigate();
+  const navigate = useNavigate();
+  const handleBack = () => {
+    navigate(-1);
+  };
 
-  // const handlePay = () => {
-  //   Swal.fire({
-  //     title: "You Have To Pay First",
-  //     text: "Otherwise you can't get the download link!",
-  //     icon: "warning",
-  //     showCancelButton: true,
-  //     confirmButtonColor: "#3085d6",
-  //     cancelButtonColor: "#d33",
-  //     confirmButtonText: "Pay Now",
-  //   }).then((result) => {
-  //     if (result.isConfirmed) {
-  //       Swal.fire("Link Loading!", "Your file is being ready.", "success").then(
-  //         () => {
-  //           window.location.href = location.pathname;
-  //         }
-  //       );
-  //     }
-  //   });
-  // };
-
+  const handleDownload = () =>{
+    swal("It's not for visitor!", "Go to price & Packages page! Only active member can download", "error");
+  }
   return (
     <div className="my-container">
       <div className="flex gap-2 py-2">
-        <button className="text-3xl p-3 rounded-md bg-green-500 text-white">
+        <button
+          onClick={handleBack}
+          className="text-3xl p-3 rounded-md bg-green-500 text-white"
+        >
           <FaArrowLeft />
         </button>
         <div>
@@ -42,9 +33,15 @@ const Download = () => {
           <p className="font-semibold text-gray-500">Go Back</p>
         </div>
       </div>
-      <p className="text-sm p-2 bg-slate-200 italic text-gray-800">
-        Home / Drivers / SPD Drivers
-      </p>
+      <div className="p-3 bg-slate-100 italic flex items-center text-gray-600">
+        <Link className="flex items-center gap-1 text-sm">
+          <FaHouseChimney /> Home
+        </Link>
+        <FaAngleRight />
+        <Link className="text-sm underline">Category</Link>
+        <FaAngleRight />
+        <Link className="text-sm underline">File Name</Link>
+      </div>
       <div className="text-center py-8 border rounded-b-lg mb-4">
         <h1 className="text-3xl">SPD DRIVER BY GDSROM</h1>
         <div className="flex justify-center py-2">
@@ -71,9 +68,7 @@ const Download = () => {
           <p className="font-semibold border-b py-2 border-t my-2">
             Downloads:- <span className="text-gray-600">450</span>
           </p>
-          <button onClick={()=> handleDownload()}
-            className="bg-[#0eb131] p-2 w-full mt-3 rounded-md text-white"
-          >
+          <button onClick={handleDownload} className="bg-[#0eb131] p-2 w-full mt-3 rounded-md text-white">
             Download Now
           </button>
         </div>

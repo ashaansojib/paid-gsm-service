@@ -1,7 +1,11 @@
 import React from "react";
 import { FaStar } from "react-icons/fa6";
+import swal from "sweetalert";
 
 const Review = () => {
+  const handleReviewSent = () =>{
+    swal("You have to Download first!", "Then you can share you opinion. Thank You!", "info");
+  }
   return (
     <div className="my-container md:p-2 p-2">
       <button className="px-6 py-4 bg-teal-600 text-white rounded-t-md">
@@ -22,7 +26,7 @@ const Review = () => {
         </h3>
         <p className="pt-4">Review</p>
         <textarea className="border border-gray-400 w-full rounded-md bg-gray-200" name="" id="" cols="30" rows="10"></textarea>
-        <button disabled={true} className="p-3 bg-green-600 rounded-md text-white">Submit</button>
+        <button onClick={handleReviewSent} className="p-3 bg-green-600 rounded-md text-white">Submit</button>
       </div>
     </div>
   );

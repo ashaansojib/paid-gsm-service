@@ -8,7 +8,7 @@ const Tool = ({ tool }) => {
     <div className="py-2 px-3 bg-slate-100 border mb-2 rounded-b-xl">
       <div className="flex justify-between items-end">
         <div>
-          <h2 className="font-semibold">{title}</h2>
+          <h2 className="font-semibold hover:text-cyan-500"><Link to={`/download/${title}`}>{title}</Link></h2>
           <div className="flex py-2">
             <FaStar className="text-orange-500" />
             <FaStar className="text-orange-500" />
