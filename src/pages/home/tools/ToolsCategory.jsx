@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 const ToolsCategory = ({ singleFile }) => {
   const { category, subCategory } = singleFile;
   return (
-    <div className="flex gap-2 bg-white my-2">
+    <div className="flex gap-2 my-2">
       <div className="w-[90px]">
         <Link to={`category/${subCategory}`}>
           <img src="/tools-icons.png" alt="" />

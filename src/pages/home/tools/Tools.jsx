@@ -9,7 +9,7 @@ const Tools = () => {
       .then((data) => getTools(data));
   }, []);
   return (
-    <div className="my-container my-6">
+    <div className="my-container my-6 border">
       <h2 className="p-3 font-semibold bg-slate-100 border-b">
         All Upgrade Tools..
       </h2>

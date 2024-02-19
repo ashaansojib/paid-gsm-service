@@ -1,9 +1,8 @@
 import React from "react";
 import HeadingMarquee from "./HeadingMarquee";
-import { Link, useLocation } from "react-router-dom";
+import { useLocation } from "react-router-dom";
 import TopNav from "./TopNav";
 import MenuBar from "./MenuBar";
-import { FaCartArrowDown, FaEnvelope, FaPhone } from "react-icons/fa6";
 const Header = () => {
   const location = useLocation();
   return (
@@ -15,7 +14,6 @@ const Header = () => {
           <TopNav />
         </div>
       </div>
-      
       {/* menu bar in header */}
       <MenuBar />
       {/* ads or updating news area */}
