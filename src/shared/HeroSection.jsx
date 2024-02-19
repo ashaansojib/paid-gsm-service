@@ -2,6 +2,7 @@ import React from "react";
 import HeadingMarquee from "./HeadingMarquee";
 
 const HeroSection = () => {
+  
   return (
     <div className="hero-bg2">
       <div className="hero-bg">
@@ -9,7 +10,7 @@ const HeroSection = () => {
           <h1 className="text-3xl text-center text-white font-bold">
             Here Your Mobile Firmware and Software Solution
           </h1>
-          <p className="text-center text-blue-100 mt-3 italic">Opening Offer! 15% OFF if buy Pack</p>
+          <p className="text-center text-blue-100 mt-3 italic">Opening Offer! 15% <span className="text-red-600 animate-ping delay-1000">OFF</span> if buy Pack</p>
           <label className="input input-bordered flex items-center gap-2 md:w-2/4 w-2/3 mx-auto mt-4">
             <input type="text" className="grow" placeholder="Search Softwares" />
             <svg

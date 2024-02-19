@@ -25,7 +25,7 @@ img{
     @apply pl-0 pr-0 md:pl-4 md:pr-4
 }
 .hero-bg{
-    background-image: url('/public/hero-wrapper.png');
+    background-image: url('/hero-wrapper.png');
     background-repeat: repeat;
     background-attachment: fixed;
     padding: 20px;

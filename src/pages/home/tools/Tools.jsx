@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import ToolsCategory from "./ToolsCategory";
+import { FaGear } from "react-icons/fa6";
 
 const Tools = () => {
   const [tools, getTools] = useState([]);
@@ -10,7 +11,8 @@ const Tools = () => {
   }, []);
   return (
     <div className="my-container my-6 border">
-      <h2 className="p-3 font-semibold bg-slate-100 border-b">
+      <h2 className="p-3 font-semibold bg-slate-100 border-b flex items-center gap-2">
+        <FaGear className="animate-spin" />
         All Upgrade Tools..
       </h2>
       <div className="grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 justify-between items-center gap-2 p-2">

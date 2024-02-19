@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 const FilesCategory = ({ singleFile }) => {
   const { name } = singleFile;
   return (
-    <div className="flex gap-2 white my-2">
+    <div data-aos="zoom-out" className="flex gap-2 white my-2">
       <div className="w-[90px]">
         <Link to="/category/ADB%20Driver">
           <img src="/folder.png" alt="" />
