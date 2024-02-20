@@ -7,6 +7,7 @@ import { FaBars } from 'react-icons/fa6';
 import swal from 'sweetalert';
 import ViewPages from '../pages/dashboard/ViewPages';
 import ViewPosts from '../pages/dashboard/ViewPosts';
+import UsersCharts from '../pages/dashboard/UsersCharts';
 
 const Dashboard = () => {
     const [showAside, setShowAside] = useState(true);
@@ -45,6 +46,7 @@ const Dashboard = () => {
                         {
                             location.pathname == '/admin' ?
                                 <>
+                                    <UsersCharts />
                                     <ViewPosts handleDelatePost={handleDelatePost} />
                                     <ViewPages handleDelatePost={handleDelatePost} />
                                 </>
