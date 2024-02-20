@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 const Blog = ({ singleBlog }) => {
   const { title } = singleBlog;
   return (
-    <div className="border p-4 mb-4 flex gap-6">
+    <div className="border p-4 mb-4 mx-2 md:flex justify-between items-center gap-6">
       <div className="w-2/4">
         <img
           src="https://gdsrom.com/media/products/thumbnails/2023/09/23/2-1695511274.png"
@@ -12,7 +12,7 @@ const Blog = ({ singleBlog }) => {
         />
       </div>
       <div>
-        <h2 className="text-2xl font-semibold">{title}</h2>
+        <h2 className="text-2xl font-semibold hover:text-blue-500"><Link to={`/details/${title}`}>{title}</Link></h2>
         <p className="p-2 text-gray-400 text-sm">
           10 July, 2024 | Author By AshaAnSojib
         </p>

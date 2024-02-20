@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 
 const Pagination = () => {
     return (
-        <div className='flex items-center gap-2'>
+        <div className='flex items-center gap-2 justify-center'>
             <Link to="/" className='p-2 bg-gray-600 inline-block text-white'><FaArrowLeft /></Link>
             <Link to="/" className='py-1 px-2 bg-gray-600 inline-block text-white'>2</Link>
             <Link to="/" className='py-1 px-2 bg-gray-600 inline-block text-white'>3</Link>
