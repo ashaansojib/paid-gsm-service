@@ -82,7 +82,7 @@ const Price = () => {
             Devices: <span className="text-gray-500">3 PCs</span>
           </p>
         </div>
-        <button className="p-3 rounded-md bg-green-500 text-white w-full">Buy Now</button>
+        <button onClick={handleActivePackage} className="p-3 rounded-md bg-green-500 text-white w-full">Buy Now</button>
       </div>
       <div className="hover:shadow-lg">
         <h2 className="p-3 mb-2 text-2xl font-semibold bg-orange-500 text-center text-white">
@@ -113,7 +113,7 @@ const Price = () => {
             Devices: <span className="text-gray-500">1 PCs</span>
           </p>
         </div>
-        <button className="p-3 rounded-md bg-green-500 text-white w-full">Buy Now</button>
+        <button onClick={handleActivePackage} className="p-3 rounded-md bg-green-500 text-white w-full">Buy Now</button>
       </div>
     </div>
   );
