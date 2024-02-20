@@ -15,6 +15,7 @@ import UnlockModels from "../pages/unlockService/UnlockModels";
 import Dashboard from "../layout/Dashboard";
 import AddService from "../pages/dashboard/pages/AddService";
 import CreatePost from "../pages/dashboard/pages/CreatePost";
+import Payments from "../pages/packages/Payments";
 
 const router = createBrowserRouter([
     {
@@ -38,6 +39,10 @@ const router = createBrowserRouter([
             {
                 path: '/price',
                 element: <Price />
+            },
+            {
+                path: '/do-payment',
+                element: <Payments />
             },
             {
                 path: '/blogs',

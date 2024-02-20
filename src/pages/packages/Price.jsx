@@ -1,6 +1,25 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
+import swal from "sweetalert";
 
 const Price = () => {
+  const navigate = useNavigate();
+  const handleActivePackage = () => {
+    swal({
+      title: "Are you sure?",
+      text: "You wanted to buy this package through E-pay!",
+      icon: "warning",
+      buttons: true,
+      dangerMode: true,
+    })
+      .then((willDelete) => {
+        if (willDelete) {
+          navigate('/do-payment')
+        } else {
+          swal("Packages not activated. Better luck next time!");
+        }
+      });
+  }
   return (
     <div className="p-2 md:p-0 my-container grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-4 justify-between my-6">
       <div className="hover:shadow-lg">
@@ -32,7 +51,7 @@ const Price = () => {
             Devices: <span className="text-gray-500">4 PCs</span>
           </p>
         </div>
-        <button className="p-3 rounded-md bg-green-500 text-white w-full">Buy Now</button>
+        <button onClick={handleActivePackage} className="p-3 rounded-md bg-green-500 text-white w-full">Buy Now</button>
       </div>
       <div className="hover:shadow-lg">
         <h2 className="p-3 mb-2 text-2xl font-semibold bg-orange-500 text-center text-white">
