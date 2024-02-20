@@ -34,3 +34,6 @@ img{
     background-image: linear-gradient(to right, #36c574, #299B90);
     
   }
+.admin-nav{
+    @apply gap-2 px-2 py-2 w-full hover:bg-[#1D284D] text-slate-400 hover:text-white flex items-center hover:ps-1
+}
