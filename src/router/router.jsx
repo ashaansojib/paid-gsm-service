@@ -16,6 +16,8 @@ import Dashboard from "../layout/Dashboard";
 import AddService from "../pages/dashboard/pages/AddService";
 import CreatePost from "../pages/dashboard/pages/CreatePost";
 import Payments from "../pages/packages/Payments";
+import SignIn from "../pages/authentication/SignIn";
+import SignUp from "../pages/authentication/SignUp";
 
 const router = createBrowserRouter([
     {
@@ -71,6 +73,14 @@ const router = createBrowserRouter([
             {
                 path: '/unlocking-services',
                 element: <UnlockModels />
+            },
+            {
+                path: '/sign-in',
+                element: <SignIn />
+            },
+            {
+                path: '/sign-up',
+                element: <SignUp />
             }
        ]
     },

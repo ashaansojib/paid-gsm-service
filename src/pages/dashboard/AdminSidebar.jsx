@@ -5,7 +5,7 @@ import { FaBoxArchive, FaCircleUser, FaFile, FaHouseChimney } from 'react-icons/
 
 const AdminSidebar = () => {
     return (
-        <div className='bg-[#111C43] p-2 h-screen'>
+        <div className='bg-[#111C43] p-2 h-screen sticky top-0 z-40'>
             <Profile />
             <Link className='admin-nav' to="/admin/add-services"><FaHouseChimney/> Services</Link>
             <Link className='admin-nav' to="/admin/create-post"><FaFile /> Posts</Link>
