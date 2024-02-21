@@ -1,16 +1,21 @@
 import React from "react";
 import { FaCircleCheck, FaSackDollar } from "react-icons/fa6";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import swal from "sweetalert";
 
 const Payments = () => {
-  const handleOrdered = () => {
+  const user = ""
+  const navigate = useNavigate();
+  const handleConfirmOrdered = () => {
     swal({
       title: "Good job! Package Activated",
       text: "You buy the package successfully",
       icon: "success",
       button: "Aww yiss!",
     });
+  };
+  const handleOrdered = () => {
+    navigate('/sign-in')
   };
   return (
     <div className="py-4 bg-slate-100">
@@ -170,12 +175,24 @@ const Payments = () => {
                   <FaCircleCheck /> Aggred with Terms & Conditions?
                 </p>
               </Link>
-              <button
-                onClick={handleOrdered}
-                className="px-3 py-2 bg-green-600 text-white mt-2 rounded-md hover:text-black hover:bg-white"
-              >
-                Place Order
-              </button>
+              {
+                user ? <button
+                  onClick={handleConfirmOrdered}
+                  className="px-3 py-2 bg-green-600 text-white mt-2 rounded-md hover:text-black hover:bg-white"
+                >
+                  Place Order
+                </button> :
+                  <>
+                    <button
+                      onClick={handleOrdered}
+                      className="px-3 py-2 bg-green-600 text-white mt-2 rounded-md hover:text-black hover:bg-white"
+                    >
+                      Place Order
+                    </button>
+                    
+                  </>
+              }
+
             </div>
           </div>
         </div>
