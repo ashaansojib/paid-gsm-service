@@ -10,3 +10,4 @@
 * npm install sweetalert --save
 * npm i aos
 * npm install swiper
+* npm install react-hook-form

@@ -1,18 +1,20 @@
 import React from "react";
 import { useForm } from "react-hook-form";
-import swal from "sweetalert";
 
-const CreatePost = () => {
+const AddFile = () => {
   const { register, handleSubmit, reset } = useForm();
   const onSubmit = (data) => {
     const post = {
       title: data.title,
-      topDesc: data.topDesc,
-      midDesc: data.midDesc,
-      laslMidDesc: data.laslMidDesc,
-      conclution: data.conclution,
+      brand: data.brand,
+      size: data.size,
+      image: data.image,
       category: data.category,
       link: data.link,
+      date: data.date,
+      visitor: 0,
+      download: 0,
+      fileName: data.title + ".xip",
     };
     reset();
     console.log(post);
@@ -22,9 +24,6 @@ const CreatePost = () => {
   };
   return (
     <div>
-      <h2 className="p-4 mb-2 bg-slate-100 font-semibold">
-        Write your post info then published :-
-      </h2>
       <form onSubmit={handleSubmit(onSubmit)}>
         <input
           {...register("title", { required: true })}
@@ -33,28 +32,21 @@ const CreatePost = () => {
           className="input border-red-500 input-bordered w-full"
         />
         <div className="grid md:grid-cols-2 grid-cols-1 justify-between items-center gap-2 py-2">
-          <textarea
-            {...register("topDesc", { required: true })}
-            className="textarea textarea-bordered"
-            placeholder="Top Description"
-          ></textarea>
-          <textarea
-            {...register("midDesc", { required: true })}
-            className="textarea textarea-bordered"
-            placeholder="Middle Description"
-          ></textarea>
-          <textarea
-            {...register("laslMidDesc", { required: true })}
-            className="textarea textarea-bordered"
-            placeholder="Last Middle Description"
-          ></textarea>
-          <textarea
-            {...register("conclution", { required: true })}
-            className="textarea textarea-bordered"
-            placeholder="Conclusion"
-          ></textarea>
-        </div>
-        <div className="grid md:grid-cols-2 grid-cols-1 justify-between gap-3 items-center">
+          <input
+            {...register("brand", { required: true })}
+            className="input input-bordered"
+            placeholder="Brand"
+          ></input>
+          <input
+            {...register("size", { required: true })}
+            className="input input-bordered"
+            placeholder="File Size"
+          ></input>
+          <input
+            {...register("image", { required: true })}
+            className="input input-bordered"
+            placeholder="image link"
+          ></input>
           <input
             {...register("category", { required: true })}
             type="text"
@@ -68,18 +60,20 @@ const CreatePost = () => {
             className="input input-bordered w-full"
           />
           <input
+            {...register("date", { required: true })}
+            type="date"
+            className="input input-bordered w-full"
+          />
+          <input
             type="submit"
             onClick={handlePublished}
             className="btn btn-wide"
             value="Published"
           />
-          {/* <button type="submit" >
-            Published
-          </button> */}
         </div>
       </form>
     </div>
   );
 };
 
-export default CreatePost;
+export default AddFile;

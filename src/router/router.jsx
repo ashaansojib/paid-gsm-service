@@ -18,6 +18,7 @@ import CreatePost from "../pages/dashboard/pages/CreatePost";
 import Payments from "../pages/packages/Payments";
 import SignIn from "../pages/authentication/SignIn";
 import SignUp from "../pages/authentication/SignUp";
+import AddFile from "../pages/dashboard/pages/AddFile";
 
 const router = createBrowserRouter([
     {
@@ -95,6 +96,10 @@ const router = createBrowserRouter([
             {
                 path: '/admin/create-post',
                 element: <CreatePost />
+            },
+            {
+                path: '/admin/post-file',
+                element: <AddFile />
             }
         ]
     },
