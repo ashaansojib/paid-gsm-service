@@ -1,10 +1,14 @@
 import React from "react";
+import { useForm } from "react-hook-form";
 import { FaStar } from "react-icons/fa6";
 import swal from "sweetalert";
 
 const Review = () => {
-  const handleReviewSent = () =>{
+  const { register, handleSubmit, reset } = useForm();
+  const onSubmit = (data) => {
+    console.log(data)
     swal("You have to Download first!", "Then you can share you opinion. Thank You!", "info");
+    reset()
   }
   return (
     <div className="my-container md:p-2 p-2">
@@ -24,9 +28,11 @@ const Review = () => {
         <h3 className="p-2 bg-green-600 rounded-sm text-white">
           You can review this file after download
         </h3>
-        <p className="pt-4">Review</p>
-        <textarea className="border border-gray-400 w-full rounded-md bg-gray-200" name="" id="" cols="30" rows="10"></textarea>
-        <button onClick={handleReviewSent} className="p-3 bg-green-600 rounded-md text-white">Submit</button>
+        <form onSubmit={handleSubmit(onSubmit)}>
+          <p className="pt-4">Review</p>
+          <textarea {...register("comments", { required: true })} className="border border-gray-400 w-full rounded-md bg-gray-200" cols="30" rows="10"></textarea>
+          <input type="submit" value="Submit" className="p-3 bg-green-600 rounded-md text-white" />
+        </form>
       </div>
     </div>
   );

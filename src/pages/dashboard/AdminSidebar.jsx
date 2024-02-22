@@ -1,7 +1,7 @@
 import React from 'react';
 import Profile from './Profile';
 import { Link } from 'react-router-dom';
-import { FaBoxArchive, FaCircleUser, FaFile, FaHouseChimney } from 'react-icons/fa6';
+import { FaBoxArchive, FaCircleUser, FaFile, FaHouseChimney, FaUser } from 'react-icons/fa6';
 
 const AdminSidebar = () => {
     return (
@@ -11,6 +11,7 @@ const AdminSidebar = () => {
             <Link className='admin-nav' to="/admin/create-post"><FaFile /> Posts</Link>
             <Link className='admin-nav' to="/"><FaBoxArchive /> Pages</Link>
             <Link className='admin-nav' to="/admin/post-file"><FaBoxArchive /> Post File</Link>
+            <Link className='admin-nav' to="/admin/add-agent"><FaUser /> Add Agent</Link>
             <button className='admin-nav'><FaCircleUser />Logout</button>
         </div>
     );

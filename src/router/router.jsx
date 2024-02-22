@@ -19,6 +19,7 @@ import Payments from "../pages/packages/Payments";
 import SignIn from "../pages/authentication/SignIn";
 import SignUp from "../pages/authentication/SignUp";
 import AddFile from "../pages/dashboard/pages/AddFile";
+import AddAgent from "../pages/dashboard/pages/AddAgent";
 
 const router = createBrowserRouter([
     {
@@ -100,6 +101,10 @@ const router = createBrowserRouter([
             {
                 path: '/admin/post-file',
                 element: <AddFile />
+            },
+            {
+                path: '/admin/add-agent',
+                element: <AddAgent />
             }
         ]
     },
