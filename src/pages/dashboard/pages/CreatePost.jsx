@@ -1,8 +1,10 @@
 import React from "react";
 import { useForm } from "react-hook-form";
 import swal from "sweetalert";
+import { useAddBlogsMutation } from "../../../redux/features/baseApi";
 
 const CreatePost = () => {
+  const [blogPublish] = useAddBlogsMutation();
   const { register, handleSubmit, reset } = useForm();
   const onSubmit = (data) => {
     const post = {
@@ -15,9 +17,8 @@ const CreatePost = () => {
       link: data.link,
     };
     reset();
-    console.log(post);
-  };
-  const handlePublished = () => {
+    blogPublish(post);
+    // success blog post
     swal("Good job!", "The post has been published!", "success");
   };
   return (
@@ -67,12 +68,7 @@ const CreatePost = () => {
             placeholder="Download Link"
             className="input input-bordered w-full"
           />
-          <input
-            type="submit"
-            onClick={handlePublished}
-            className="btn btn-wide"
-            value="Published"
-          />
+          <input type="submit" className="btn btn-wide" value="Published" />
           {/* <button type="submit" >
             Published
           </button> */}

@@ -11,3 +11,4 @@
 * npm i aos
 * npm install swiper
 * npm install react-hook-form
+* npm i react-redux @reduxjs/toolkit

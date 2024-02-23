@@ -1,8 +1,10 @@
 import React from "react";
 import { useForm } from "react-hook-form";
+import { useAddFileMutation } from "../../../redux/features/baseApi";
 
 const AddFile = () => {
   const { register, handleSubmit, reset } = useForm();
+  const [addedFilePost] = useAddFileMutation();
   const onSubmit = (data) => {
     const post = {
       title: data.title,
@@ -17,6 +19,7 @@ const AddFile = () => {
       fileName: data.title + ".xip",
     };
     reset();
+    addedFilePost(post);
     console.log(post);
   };
   const handlePublished = () => {
