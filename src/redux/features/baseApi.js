@@ -41,6 +41,12 @@ export const baseApi = createApi({
     getToolAndDriver: builder.query({
       query: () => "/unique-brands",
     }),
+    removeTool: builder.mutation({
+      query: (id) => ({
+        url: `/remove-tool/${id}`,
+        method: "DELETE",
+      }),
+    }),
     // service section
     getServices: builder.query({
       query: () => "/o-services",
@@ -78,4 +84,5 @@ export const {
   useGetToolsQuery,
   useGetToolAndDriverQuery,
   useAddToolMutation,
+  useRemoveToolMutation,
 } = baseApi;

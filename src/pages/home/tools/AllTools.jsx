@@ -8,11 +8,11 @@ const AllTools = () => {
   return (
     <div className="my-container">
       <div className="p-3 bg-slate-100 italic flex items-center text-gray-600">
-        <Link className="flex items-center gap-1 text-sm">
+        <Link to="/" className="flex items-center gap-1 text-sm">
           <FaHouseChimney /> Home
         </Link>
         <FaAngleRight />
-        <Link className="text-sm underline">Category</Link>
+        <Link className="text-sm underline">tools</Link>
         <FaAngleRight />
         <Link className="text-sm underline">File Name</Link>
       </div>

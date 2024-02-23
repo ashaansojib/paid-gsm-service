@@ -12,7 +12,7 @@ const ToolsCategory = ({ singleFile }) => {
       </div>
       <div>
         <Link to={`/category/${brand}`}>
-          <h2 className="text-xl font-semibold">{brand}</h2>
+          <h2 className="text-xl font-semibold uppercase">{brand}</h2>
         </Link>
         <p className="italic text-slate-600 text-sm">
           All Brands are available

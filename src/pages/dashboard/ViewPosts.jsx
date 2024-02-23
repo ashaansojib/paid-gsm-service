@@ -1,8 +1,11 @@
 import React from "react";
-import { useGetToolsQuery } from "../../redux/features/baseApi";
+import {
+  useGetToolsQuery,
+} from "../../redux/features/baseApi";
 
 const ViewPosts = ({ handleDelatePost }) => {
   const { data: tools, isLoading } = useGetToolsQuery();
+
   return (
     <>
       <div className="md:flex justify-between items-center bg-slate-100 p-2">
@@ -44,7 +47,7 @@ const ViewPosts = ({ handleDelatePost }) => {
                 <td>
                   <button className="btn btn-outline btn-xs mr-1">Edit</button>
                   <button
-                    onClick={handleDelatePost}
+                    onClick={() => handleDelatePost(data._id)}
                     className="btn btn-outline btn-xs"
                   >
                     Delete
