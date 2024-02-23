@@ -20,97 +20,104 @@ import SignIn from "../pages/authentication/SignIn";
 import SignUp from "../pages/authentication/SignUp";
 import AddFile from "../pages/dashboard/pages/AddFile";
 import AddAgent from "../pages/dashboard/pages/AddAgent";
+import AddTools from "../pages/dashboard/pages/AddTools";
 
 const router = createBrowserRouter([
-    {
-        path: '/',
-        element: <Main />,
-        children: [
-            {
-                path: '/',
-                element: <Home />
-            },
-            {
-                path: '/category/:name',
-                element: <AllTools />,
-                loader: () => fetch(`/ToolData.json`)
-            },
-            {
-                path: '/download/:name',
-                element: <Download />,
-                loader: () => fetch(`/ToolData.json`)
-            },
-            {
-                path: '/price',
-                element: <Price />
-            },
-            {
-                path: '/do-payment',
-                element: <Payments />
-            },
-            {
-                path: '/blogs',
-                element: <Blogs />
-            },
-            {
-                path: '/details/:name',
-                element: <BlogDetails />
-            },
-            {
-                path: '/user-request',
-                element: <Request />
-            },
-            {
-                path: '/about-us',
-                element: <About />
-            },
-            {
-                path: '/contact',
-                element: <Contact />
-            },
-            {
-                path: '/reseller',
-                element: <Agents />
-            },
-            {
-                path: '/unlocking-services',
-                element: <UnlockModels />
-            },
-            {
-                path: '/sign-in',
-                element: <SignIn />
-            },
-            {
-                path: '/sign-up',
-                element: <SignUp />
-            }
-       ]
-    },
-    {
-        path: '/admin',
-        element: <Dashboard />,
-        children: [
-            {
-                path: '/admin/add-services',
-                element: <AddService />
-            },
-            {
-                path: '/admin/create-post',
-                element: <CreatePost />
-            },
-            {
-                path: '/admin/post-file',
-                element: <AddFile />
-            },
-            {
-                path: '/admin/add-agent',
-                element: <AddAgent />
-            }
-        ]
-    },
-    {
-        path: '*',
-        element: <ErrorContent />
-    }
+  {
+    path: "/",
+    element: <Main />,
+    children: [
+      {
+        path: "/",
+        element: <Home />,
+      },
+      {
+        path: "/category/:name",
+        element: <AllTools />,
+        loader: ({ params }) =>
+          fetch(`http://localhost:9988/tool-category/${params.name}`),
+      },
+      {
+        path: "/download/:_id",
+        element: <Download />,
+        loader: ({ params }) =>
+          fetch(`http://localhost:9988/single-tool/${params._id}`),
+      },
+      {
+        path: "/price",
+        element: <Price />,
+      },
+      {
+        path: "/do-payment",
+        element: <Payments />,
+      },
+      {
+        path: "/blogs",
+        element: <Blogs />,
+      },
+      {
+        path: "/details/:name",
+        element: <BlogDetails />,
+      },
+      {
+        path: "/user-request",
+        element: <Request />,
+      },
+      {
+        path: "/about-us",
+        element: <About />,
+      },
+      {
+        path: "/contact",
+        element: <Contact />,
+      },
+      {
+        path: "/reseller",
+        element: <Agents />,
+      },
+      {
+        path: "/unlocking-services",
+        element: <UnlockModels />,
+      },
+      {
+        path: "/sign-in",
+        element: <SignIn />,
+      },
+      {
+        path: "/sign-up",
+        element: <SignUp />,
+      },
+    ],
+  },
+  {
+    path: "/admin",
+    element: <Dashboard />,
+    children: [
+      {
+        path: "/admin/add-services",
+        element: <AddService />,
+      },
+      {
+        path: "/admin/create-post",
+        element: <CreatePost />,
+      },
+      {
+        path: "/admin/post-file",
+        element: <AddFile />,
+      },
+      {
+        path: "/admin/add-tool",
+        element: <AddTools />,
+      },
+      {
+        path: "/admin/add-agent",
+        element: <AddAgent />,
+      },
+    ],
+  },
+  {
+    path: "*",
+    element: <ErrorContent />,
+  },
 ]);
 export default router;

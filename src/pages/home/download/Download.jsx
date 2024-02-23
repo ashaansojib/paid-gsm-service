@@ -10,15 +10,19 @@ import Review from "./Review";
 import swal from "sweetalert";
 
 const Download = () => {
-  const data = useLoaderData();
+  const { brand, title, date, fileName, link, size, visitor, download, category} = useLoaderData();
   const navigate = useNavigate();
   const handleBack = () => {
     navigate(-1);
   };
 
-  const handleDownload = () =>{
-    swal("It's not for visitor!", "Go to price & Packages page! Only active member can download", "error");
-  }
+  const handleDownload = () => {
+    swal(
+      "It's not for visitor!",
+      "Go to price & Packages page! Only active member can download",
+      "error"
+    );
+  };
   return (
     <div className="my-container">
       <div className="flex gap-2 py-2">
@@ -29,7 +33,7 @@ const Download = () => {
           <FaArrowLeft />
         </button>
         <div>
-          <h3 className="text-xl text-gray-800 font-semibold">SPD DRIVER</h3>
+          <h3 className="text-xl text-gray-800 font-semibold">{brand}</h3>
           <p className="font-semibold text-gray-500">Go Back</p>
         </div>
       </div>
@@ -38,12 +42,12 @@ const Download = () => {
           <FaHouseChimney /> Home
         </Link>
         <FaAngleRight />
-        <Link className="text-sm underline">Category</Link>
+        <Link className="text-sm underline">{category}</Link>
         <FaAngleRight />
-        <Link className="text-sm underline">File Name</Link>
+        <Link className="text-sm underline">{fileName}</Link>
       </div>
       <div className="text-center py-8 border rounded-b-lg mb-4">
-        <h1 className="text-3xl">SPD DRIVER BY GDSROM</h1>
+        <h1 className="text-3xl uppercase">{title}</h1>
         <div className="flex justify-center py-2">
           <FaStar className="text-orange-500" />
           <FaStar className="text-orange-500" />
@@ -52,23 +56,26 @@ const Download = () => {
           <FaStar className="text-orange-500" />
         </div>
         <div className="p-4">
-          <p className="text-sm">SAMSUNG DRIVER BY GDSROM</p>
+          <p className="text-sm">{title}</p>
           <h3 className="p-1 text-white bg-gray-400 md:w-1/3 rounded-md mx-auto my-2">
-            SAMSUNG DRIVER BY GDSROM
+            {fileName}
           </h3>
           <p className="font-semibold border-b py-2 border-t">
-            Date:- <span className="text-gray-600">12.12.2023 10:29:33AM</span>
+            Date:- <span className="text-gray-600">{date}</span>
           </p>
           <p className="font-semibold border-b py-2 border-t my-2">
-            FileSize:- <span className="text-gray-600">25.00 MB</span>
+            FileSize:- <span className="text-gray-600">{size}</span>
           </p>
           <p className="font-semibold border-b py-2 border-t my-2">
-            Visits:- <span className="text-gray-600">1875</span>
+            Visits:- <span className="text-gray-600">{visitor}</span>
           </p>
           <p className="font-semibold border-b py-2 border-t my-2">
-            Downloads:- <span className="text-gray-600">450</span>
+            Downloads:- <span className="text-gray-600">{download}</span>
           </p>
-          <button onClick={handleDownload} className="bg-[#0eb131] p-2 w-full mt-3 rounded-md text-white">
+          <button
+            onClick={handleDownload}
+            className="bg-[#0eb131] p-2 w-full mt-3 rounded-md text-white"
+          >
             Download Now
           </button>
         </div>

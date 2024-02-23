@@ -25,6 +25,22 @@ export const baseApi = createApi({
         body: data,
       }),
     }),
+    // tools and driver section
+    getTools: builder.query({
+      query: () => ({
+        url: "/all-tools",
+      }),
+    }),
+    addTool: builder.mutation({
+      query: (data) => ({
+        url: "/add-tool",
+        method: "POST",
+        body: data,
+      }),
+    }),
+    getToolAndDriver: builder.query({
+      query: () => "/unique-brands",
+    }),
     // service section
     getServices: builder.query({
       query: () => "/o-services",
@@ -32,6 +48,17 @@ export const baseApi = createApi({
     addService: builder.mutation({
       query: (data) => ({
         url: "/add-service",
+        method: "POST",
+        body: data,
+      }),
+    }),
+    // agents apis
+    getAgent: builder.query({
+      query: () => "/agents",
+    }),
+    addAgent: builder.mutation({
+      query: (data) => ({
+        url: "/add-agent",
         method: "POST",
         body: data,
       }),
@@ -46,4 +73,9 @@ export const {
   useAddServiceMutation,
   useGetBlogsQuery,
   useAddBlogsMutation,
+  useGetAgentQuery,
+  useAddAgentMutation,
+  useGetToolsQuery,
+  useGetToolAndDriverQuery,
+  useAddToolMutation,
 } = baseApi;

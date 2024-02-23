@@ -11,6 +11,7 @@ const AdminSidebar = () => {
             <Link className='admin-nav' to="/admin/create-post"><FaFile /> Posts</Link>
             <Link className='admin-nav' to="/"><FaBoxArchive /> Pages</Link>
             <Link className='admin-nav' to="/admin/post-file"><FaBoxArchive /> Post File</Link>
+            <Link className='admin-nav' to="/admin/add-tool"><FaBoxArchive /> Tool & Driver</Link>
             <Link className='admin-nav' to="/admin/add-agent"><FaUser /> Add Agent</Link>
             <button className='admin-nav'><FaCircleUser />Logout</button>
         </div>

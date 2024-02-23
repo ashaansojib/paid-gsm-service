@@ -1,13 +1,16 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import { useGetAgentQuery } from "../../redux/features/baseApi";
 
 const Agents = () => {
+  const { data: ourAgents, isLoading } = useGetAgentQuery();
   const [ourAgent, setOurAgent] = useState([]);
   useEffect(() => {
     fetch("/Agents.json")
       .then((res) => res.json())
       .then((data) => setOurAgent(data));
   }, []);
+  console.log(ourAgents);
   return (
     <div className="my-container grid lg:grid-cols-4 md:grid-cols-3 grid-cols-1 gap-4 justify-between p-2">
       {ourAgent.map((single) => (
@@ -17,7 +20,12 @@ const Agents = () => {
           </div>
           <h4 className="font-semibold py-2">{single.name}</h4>
           <p className="text-red-600 text-sm mt-2">{single.category}</p>
-          <Link onClick={() => document.getElementById('my_modal_2').showModal()} className="mt-2 rounded-md w-full hover:bg-blue-500 py-2 px-4 inline-block bg-slate-500 text-white">Full Info</Link>
+          <Link
+            onClick={() => document.getElementById("my_modal_2").showModal()}
+            className="mt-2 rounded-md w-full hover:bg-blue-500 py-2 px-4 inline-block bg-slate-500 text-white"
+          >
+            Full Info
+          </Link>
           {/* modal area */}
           <dialog id="my_modal_2" className="modal">
             <div className="modal-box">
