@@ -21,6 +21,7 @@ import SignUp from "../pages/authentication/SignUp";
 import AddFile from "../pages/dashboard/pages/AddFile";
 import AddAgent from "../pages/dashboard/pages/AddAgent";
 import AddTools from "../pages/dashboard/pages/AddTools";
+import AllFile from "../pages/home/files/AllFile";
 
 const router = createBrowserRouter([
   {
@@ -38,10 +39,22 @@ const router = createBrowserRouter([
           fetch(`http://localhost:9988/tool-category/${params.name}`),
       },
       {
-        path: "/download/:_id",
+        path: "/file-category/:name",
+        element: <AllFile />,
+        loader: ({ params }) =>
+          fetch(`http://localhost:9988/file-brand/${params.name}`),
+      },
+      {
+        path: "/download/tools/:_id",
         element: <Download />,
         loader: ({ params }) =>
           fetch(`http://localhost:9988/single-tool/${params._id}`),
+      },
+      {
+        path: "/download/files/:_id",
+        element: <Download />,
+        loader: ({ params }) =>
+          fetch(`http://localhost:9988/single-file/${params._id}`),
       },
       {
         path: "/price",

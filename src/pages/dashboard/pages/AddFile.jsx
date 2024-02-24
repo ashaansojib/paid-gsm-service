@@ -8,7 +8,7 @@ const AddFile = () => {
   const onSubmit = (data) => {
     const post = {
       title: data.title,
-      brand: data.brand,
+      brand: data.brand.toUpperCase(),
       size: data.size,
       image: data.image,
       category: data.category,

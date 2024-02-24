@@ -14,7 +14,7 @@ export const baseApi = createApi({
         body: data,
       }),
     }),
-    // single file and tools
+    // single file and section
     getAllFiles: builder.query({
       query: () => "/all-files",
     }),
@@ -23,6 +23,17 @@ export const baseApi = createApi({
         url: "/add-file",
         method: "POST",
         body: data,
+      }),
+    }),
+    removeFile: builder.mutation({
+      query: (id) => ({
+        url: `/remove-post/${id}`,
+        method: 'DELETE',
+      }),
+    }),
+    getUniquePost: builder.query({
+      query: () => ({
+        url: '/unique-posts',
       }),
     }),
     // tools and driver section
@@ -74,7 +85,9 @@ export const baseApi = createApi({
 
 export const {
   useGetAllFilesQuery,
+  useGetUniquePostQuery,
   useAddFileMutation,
+  useRemoveFileMutation,
   useGetServicesQuery,
   useAddServiceMutation,
   useGetBlogsQuery,
