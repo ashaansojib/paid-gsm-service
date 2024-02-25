@@ -2,14 +2,7 @@ import React from "react";
 import { FaSearchengin } from "react-icons/fa6";
 import BrandList from "./BrandList";
 import ModelList from "./ModelList";
-import { useGetServicesQuery } from "../../redux/features/baseApi";
 const UnlockModels = () => {
-  const { data: service, isLoading } = useGetServicesQuery();
-  if(service){
-    console.log(service)
-  }else{
-    console.log('loading')
-  }
   return (
     <div className="bg-slate-200 p-4">
       <div className="my-container bg-white p-4 rounded-md">

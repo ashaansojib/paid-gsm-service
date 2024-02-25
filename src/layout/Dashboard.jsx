@@ -6,13 +6,11 @@ import { Outlet, useLocation } from "react-router-dom";
 import { FaBars } from "react-icons/fa6";
 import swal from "sweetalert";
 import ViewPages from "../pages/dashboard/ViewPages";
-import ViewPosts from "../pages/dashboard/ViewPosts";
 import UsersCharts from "../pages/dashboard/UsersCharts";
-import { useRemoveFileMutation, useRemoveToolMutation } from "../redux/features/baseApi";
+import { useRemoveToolMutation } from "../redux/features/baseApi";
 
 const Dashboard = () => {
   const [removedTool] = useRemoveToolMutation();
-  const [removePosts] = useRemoveFileMutation();
   const [showAside, setShowAside] = useState(true);
   const location = useLocation();
 
@@ -35,26 +33,6 @@ const Dashboard = () => {
       }
     });
   };
-  // comfirm delete alert
-  const handleDelateDriver = (id) => {
-    swal({
-      title: "Are you sure?",
-      text: "Once deleted, you will not be able to recover this post!",
-      icon: "warning",
-      buttons: true,
-      dangerMode: true,
-    }).then((willDelete) => {
-      if (willDelete) {
-        swal("The post has been permanently removed from the server!", {
-          icon: "success",
-        });
-        removePosts(id);
-      } else {
-        swal("You don't want to delete it?");
-      }
-    });
-  };
-
   return (
     <div className="max-w-screen-xl mx-auto">
       <FaBars
@@ -71,7 +49,6 @@ const Dashboard = () => {
             {location.pathname == "/admin" ? (
               <>
                 <UsersCharts />
-                <ViewPosts handleDelatePost={handleDelatePost} handleDelateDriver={handleDelateDriver} />
                 <ViewPages handleDelatePost={handleDelatePost} />
               </>
             ) : (

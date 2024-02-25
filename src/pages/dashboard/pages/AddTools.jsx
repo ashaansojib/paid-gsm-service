@@ -1,10 +1,12 @@
 import React from "react";
 import { useForm } from "react-hook-form";
-import { useAddToolMutation } from "../../../redux/features/baseApi";
+import { useAddToolMutation, useGetToolsQuery } from "../../../redux/features/baseApi";
+import ControlPages from "./ControlPages";
 
 const AddTools = () => {
   const { register, handleSubmit, reset } = useForm();
   const [addedFilePost] = useAddToolMutation();
+  const { data: toolsAndDriver, isLoading } = useGetToolsQuery();
   const onSubmit = (data) => {
     const post = {
       title: data.title,
@@ -20,12 +22,10 @@ const AddTools = () => {
     };
     reset();
     addedFilePost(post);
-  };
-  const handlePublished = () => {
     swal("Good job!", "The post has been published!", "success");
   };
   return (
-    <div>
+    <>
       <form onSubmit={handleSubmit(onSubmit)}>
         <input
           {...register("title", { required: true })}
@@ -68,13 +68,17 @@ const AddTools = () => {
           />
           <input
             type="submit"
-            onClick={handlePublished}
             className="btn btn-wide"
             value="Published"
           />
         </div>
       </form>
-    </div>
+      {
+        isLoading ?
+          <div className="skeleton h-52 w-full"></div> :
+          <ControlPages tool={toolsAndDriver} />
+      }
+    </>
   );
 };
 

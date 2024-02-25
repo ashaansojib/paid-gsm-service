@@ -1,7 +1,7 @@
 import { Listbox, Transition } from '@headlessui/react';
 import React, { useState } from 'react';
 import { Fragment } from 'react';
-import { FaArrowPointer} from 'react-icons/fa6';
+import { FaArrowPointer } from 'react-icons/fa6';
 
 const BrandList = () => {
     const people = [
@@ -11,8 +11,8 @@ const BrandList = () => {
         { name: 'Xiaomi' },
         { name: 'Itel' },
         { name: 'Firm' },
-      ]
-      const [selected, setSelected] = useState(people[0])
+    ]
+    const [selected, setSelected] = useState(people[0])
     return (
         <div className="w-48 border">
             <Listbox value={selected} onChange={setSelected}>

@@ -1,9 +1,11 @@
 import React from "react";
 import { useForm } from "react-hook-form";
-import { useAddFileMutation } from "../../../redux/features/baseApi";
+import { useAddFileMutation, useGetAllFilesQuery } from "../../../redux/features/baseApi";
+import ControlPages from "./ControlPages";
 
 const AddFile = () => {
   const { register, handleSubmit, reset } = useForm();
+  const { data: files, isLoading } = useGetAllFilesQuery()
   const [addedFilePost] = useAddFileMutation();
   const onSubmit = (data) => {
     const post = {
@@ -20,13 +22,10 @@ const AddFile = () => {
     };
     reset();
     addedFilePost(post);
-    console.log(post);
-  };
-  const handlePublished = () => {
     swal("Good job!", "The post has been published!", "success");
   };
   return (
-    <div>
+    <>
       <form onSubmit={handleSubmit(onSubmit)}>
         <input
           {...register("title", { required: true })}
@@ -69,13 +68,18 @@ const AddFile = () => {
           />
           <input
             type="submit"
-            onClick={handlePublished}
             className="btn btn-wide"
             value="Published"
           />
         </div>
       </form>
-    </div>
+      {/* see all the files */}
+      {
+        isLoading ?
+          <div className="skeleton h-52 w-full"></div> :
+          <ControlPages tool={files} />
+      }
+    </>
   );
 };
 

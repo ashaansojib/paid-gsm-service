@@ -35,5 +35,5 @@ img{
     
   }
 .admin-nav{
-    @apply gap-2 px-2 py-2 w-full hover:bg-[#1D284D] text-slate-400 hover:text-white flex items-center hover:ps-1
+    @apply gap-2 px-2 py-2 w-full uppercase hover:bg-[#1D284D] text-slate-400 hover:text-white flex items-center hover:ps-1
 }

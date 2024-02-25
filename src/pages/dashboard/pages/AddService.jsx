@@ -1,9 +1,11 @@
 import React from "react";
 import { useForm } from "react-hook-form";
 import swal from "sweetalert";
-import { useAddServiceMutation } from "../../../redux/features/baseApi";
+import { useAddServiceMutation, useGetServicesQuery } from "../../../redux/features/baseApi";
+import ControlPages from "./ControlPages";
 
 const AddService = () => {
+  const { data: service, isLoading } = useGetServicesQuery();
   const [addOService] = useAddServiceMutation();
   const { register, handleSubmit, reset } = useForm();
   const onSubmit = (data) => {
@@ -12,9 +14,11 @@ const AddService = () => {
     // success alert
     swal("Good job!", "The post has been published!", "success");
   };
-  
+  const handleRemeveService = (id) => {
+    console.log(id)
+  }
   return (
-    <div>
+    <>
       <h2 className="p-4 mb-2 bg-slate-100 font-semibold">
         Write your post info then published :-
       </h2>
@@ -51,12 +55,15 @@ const AddService = () => {
             className="input input-bordered w-full"
           />
           <input type="submit" value="Add Service" className="btn btn-wide" />
-          {/* <button onClick={handlePublished} className="btn btn-wide">
-            PostNow
-          </button> */}
         </div>
       </form>
-    </div>
+      {/* here you can see all services */}
+      {
+        isLoading ?
+          <div className="skeleton h-52 w-full"></div> :
+          <ControlPages tool={service} />
+      }
+    </>
   );
 };
 

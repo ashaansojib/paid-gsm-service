@@ -1,8 +1,11 @@
 import React from 'react';
+import { useGetServicesQuery } from '../../redux/features/baseApi';
 
 const ModelList = () => {
+    const { data: service, isLoading } = useGetServicesQuery();
+
     return (
-        <div className="">
+        <>
             <table className="table">
                 {/* head */}
                 <thead className='bg-slate-100'>
@@ -12,22 +15,18 @@ const ModelList = () => {
                         <th className='col-span-2'>Supports</th>
                     </tr>
                 </thead>
-                <tbody className=''>
-                    {/* row 1 */}
-                    <tr className='grid grid-cols-4 mb-1'>
-                        <td className='border'>Oppo</td>
-                        <td className='border'>A9 2024</td>
-                        <td className='border col-span-2'>Frp, Unlcok</td>
-                    </tr>
-                    {/* row 1 */}
-                    <tr className='grid grid-cols-4 mb-1'>
-                        <td className='border'>Xioami</td>
-                        <td className='border'>X9 pro</td>
-                        <td className='border col-span-2'>Frp, Mi unlock</td>
-                    </tr>
+                <tbody>
+                    {
+                        service?.map(item =>
+                            <tr key={item._id} className='grid grid-cols-4 mb-1'>
+                                <td className='border'>{item.brand} {item.model}</td>
+                                <td className='border'>{item.code}</td>
+                                <td className='border col-span-2'>{item.services}</td>
+                            </tr>)
+                    }
                 </tbody>
             </table>
-        </div>
+        </>
     );
 };
 

@@ -10,7 +10,7 @@ import Review from "./Review";
 import swal from "sweetalert";
 
 const Download = () => {
-  const { brand, title, date, fileName, link, size, visitor, download, category} = useLoaderData();
+  const { brand, title, date, fileName, size, visitor, download, category} = useLoaderData();
   const navigate = useNavigate();
   const handleBack = () => {
     navigate(-1);

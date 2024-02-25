@@ -36,7 +36,7 @@ export const baseApi = createApi({
         url: '/unique-posts',
       }),
     }),
-    // tools and driver section
+    // tools and driver section--------------------------------
     getTools: builder.query({
       query: () => ({
         url: "/all-tools",
@@ -58,7 +58,7 @@ export const baseApi = createApi({
         method: "DELETE",
       }),
     }),
-    // service section
+    // service section------------------------------------
     getServices: builder.query({
       query: () => "/o-services",
     }),
