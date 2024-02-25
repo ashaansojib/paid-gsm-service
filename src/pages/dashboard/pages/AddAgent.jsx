@@ -1,9 +1,11 @@
 import React from "react";
 import { useForm } from "react-hook-form";
 import swal from "sweetalert";
-import { useAddAgentMutation } from "../../../redux/features/baseApi";
+import { useAddAgentMutation, useGetAgentQuery } from "../../../redux/features/baseApi";
+import ControlPages from "./ControlPages";
 
 const AddAgent = () => {
+  const { data: agents, isLoading } = useGetAgentQuery();
   const [addOurAgent] = useAddAgentMutation();
   const { register, handleSubmit, reset } = useForm();
   const onSubmit = (data) => {
@@ -12,7 +14,7 @@ const AddAgent = () => {
     reset();
   };
   return (
-    <div>
+    <>
       <form onSubmit={handleSubmit(onSubmit)}>
         <div className="grid md:grid-cols-2 grid-cols-1 justify-between gap-4">
           <input
@@ -66,7 +68,13 @@ const AddAgent = () => {
         </div>
         <input type="submit" value="Add Agent" className="btn btn-wide my-2" />
       </form>
-    </div>
+      {/* manage all agents profile here */}
+      {
+        isLoading ?
+          <div className="skeleton h-52 w-full"></div> :
+          <ControlPages tool={agents} />
+      }
+    </>
   );
 };
 

@@ -37,8 +37,8 @@ const ControlPages = (tools) => {
                         {tools.tool?.map((data, i) => (
                             <tr key={data._id} className="hover">
                                 <th>{i + 1}</th>
-                                <td className='uppercase'>{data.brand}</td>
-                                <td>{data.title ? data.title : data.services}</td>
+                                <td className='uppercase'>{data?.brand} {data?.name}</td>
+                                <td>{data.title ? data.title : data.services} {data?.email}</td>
                                 <td>
                                     <button className="btn btn-outline btn-xs mr-1">Edit</button>
                                     <button
