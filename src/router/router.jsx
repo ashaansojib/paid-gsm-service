@@ -36,25 +36,25 @@ const router = createBrowserRouter([
         path: "/category/:name",
         element: <AllTools />,
         loader: ({ params }) =>
-          fetch(`http://localhost:9988/tool-category/${params.name}`),
+          fetch(`https://o-gsmservice-server.vercel.app/tool-category/${params.name}`),
       },
       {
         path: "/file-category/:name",
         element: <AllFile />,
         loader: ({ params }) =>
-          fetch(`http://localhost:9988/file-brand/${params.name}`),
+          fetch(`https://o-gsmservice-server.vercel.app/file-brand/${params.name}`),
       },
       {
         path: "/download/tools/:_id",
         element: <Download />,
         loader: ({ params }) =>
-          fetch(`http://localhost:9988/single-tool/${params._id}`),
+          fetch(`https://o-gsmservice-server.vercel.app/single-tool/${params._id}`),
       },
       {
         path: "/download/files/:_id",
         element: <Download />,
         loader: ({ params }) =>
-          fetch(`http://localhost:9988/single-file/${params._id}`),
+          fetch(`https://o-gsmservice-server.vercel.app/single-file/${params._id}`),
       },
       {
         path: "/price",
