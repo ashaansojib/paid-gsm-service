@@ -12,7 +12,7 @@ const Files = () => {
       </h2>
       <div className="grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 justify-between items-center gap-2 my-2 p-2">
         {isLoading
-          ? <div className="skeleton"></div>
+          ? <div className="skeleton h-32 w-full"></div>
           : filesOrg?.map((singleFile) => (
             <FilesCategory key={singleFile._id} singleFile={singleFile} />
           ))}

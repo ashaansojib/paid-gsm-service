@@ -39,9 +39,9 @@ const MenuBar = () => {
         </NavLink>
         <NavLink
           className={({ isActive }) => (isActive ? "active" : "default")}
-          to="/category/Sony%20USB%20Driver"
+          to="/category/DRIVER"
         >
-          Update Tools
+          Update Drivers
         </NavLink>
         <NavLink
           className={({ isActive }) => (isActive ? "active" : "default")}

@@ -17,12 +17,12 @@ const ModelList = () => {
                 </thead>
                 <tbody>
                     {
-                        service?.map(item =>
-                            <tr key={item._id} className='grid grid-cols-4 mb-1'>
-                                <td className='border'>{item.brand} {item.model}</td>
-                                <td className='border'>{item.code}</td>
-                                <td className='border col-span-2'>{item.services}</td>
-                            </tr>)
+                       isLoading ? <div className='skeleton h-32 w-full'></div>  :  service?.map(item =>
+                        <tr key={item._id} className='grid grid-cols-4 mb-1'>
+                            <td className='border'>{item.brand} {item.model}</td>
+                            <td className='border'>{item.code}</td>
+                            <td className='border col-span-2'>{item.services}</td>
+                        </tr>)
                     }
                 </tbody>
             </table>
