@@ -1,10 +1,12 @@
 import React from "react";
 import { useForm } from "react-hook-form";
 import swal from "sweetalert";
-import { useAddBlogsMutation } from "../../../redux/features/baseApi";
+import { useAddBlogsMutation, useGetBlogsQuery } from "../../../redux/features/baseApi";
+import ControlPages from "./ControlPages";
 
 const CreatePost = () => {
   const [blogPublish] = useAddBlogsMutation();
+  const { data: posts, isLoading } = useGetBlogsQuery();
   const { register, handleSubmit, reset } = useForm();
   const onSubmit = (data) => {
     const post = {
@@ -69,11 +71,13 @@ const CreatePost = () => {
             className="input input-bordered w-full"
           />
           <input type="submit" className="btn btn-wide" value="Published" />
-          {/* <button type="submit" >
-            Published
-          </button> */}
         </div>
       </form>
+      {
+        isLoading ?
+          <div className="skeleton h-52 w-full"></div> :
+          <ControlPages tool={posts} />
+      }
     </div>
   );
 };

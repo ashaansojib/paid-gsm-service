@@ -70,17 +70,42 @@ export const baseApi = createApi({
       }),
     }),
 
-    // agents apis
-    // getAgent: builder.query({
-    //   query: () => "agents",
-    // }),
-    // addAgent: builder.mutation({
-    //   query: (data) => ({
-    //     url: "add-agent",
-    //     method: "POST",
-    //     body: data,
-    //   }),
-    // }),
+    // pages for blog ------------------------------
+    allPages: builder.query({
+      query: () => "pages",
+    }),
+    addPage: builder.mutation({
+      query: (data) => ({
+        url: "add-page",
+        method: "POST",
+        body: data,
+      }),
+    }),
+    removePage: builder.mutation({
+      query: (id) => ({
+        url: `remove-page/${id}`,
+        method: 'DELETE',
+      }),
+    }),
+
+    // agents for service ------------------------------
+    allAgent: builder.query({
+      query: () => "agents",
+    }),
+    addAgent: builder.mutation({
+      query: (data) => ({
+        url: "add-agent",
+        method: "POST",
+        body: data,
+      }),
+    }),
+    removeAgent: builder.mutation({
+      query: (id) => ({
+        url: ` remove-agent/${id}`,
+        method: 'DELETE',
+      }),
+    }),
+
   }),
 });
 
@@ -97,6 +122,10 @@ export const {
   useAddServiceMutation,
   useGetBlogsQuery,
   useAddBlogsMutation,
-  useGetAgentQuery,
-  useAddAgentMutation
+  useAllPagesQuery,
+  useAddPageMutation,
+  useRemovePageMutation,
+  useAllAgentQuery,
+  useAddAgentMutation,
+  useRemoveAgentMutation,
 } = baseApi;

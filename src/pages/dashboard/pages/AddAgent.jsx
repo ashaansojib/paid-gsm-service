@@ -1,11 +1,11 @@
 import React from "react";
 import { useForm } from "react-hook-form";
 import swal from "sweetalert";
-import { useAddAgentMutation, useGetAgentQuery } from "../../../redux/features/baseApi";
+import { useAddAgentMutation, useAllAgentQuery } from "../../../redux/features/baseApi";
 import ControlPages from "./ControlPages";
 
 const AddAgent = () => {
-  const { data: agents, isLoading } = useGetAgentQuery();
+  const { data: agents, isLoading } = useAllAgentQuery();
   const [addOurAgent] = useAddAgentMutation();
   const { register, handleSubmit, reset } = useForm();
   const onSubmit = (data) => {

@@ -8,7 +8,7 @@ const AdminSidebar = () => {
         <div className='bg-[#111C43] p-2 h-screen sticky top-0 z-40'>
             <Profile />
             <Link className='admin-nav' to="/admin"><FaHouseChimney/> Dashboard</Link>
-            <Link className='admin-nav' to="/admin/create-post"><FaFile />Add Posts</Link>
+            <Link className='admin-nav' to="/admin/create-post"><FaFile />Add Blogs</Link>
             <Link className='admin-nav' to="/admin/post-file"><FaBoxArchive /> add File</Link>
             <Link className='admin-nav' to="/admin/add-tool"><FaBoxArchive /> Tool & Driver</Link>
             <Link className='admin-nav' to="/admin/add-services"><FaHouseChimney/>add Service</Link>

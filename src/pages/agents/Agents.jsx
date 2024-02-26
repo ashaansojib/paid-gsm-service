@@ -1,19 +1,12 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import { useGetAgentQuery } from "../../redux/features/baseApi";
+import { useAllAgentQuery } from "../../redux/features/baseApi";
 
 const Agents = () => {
-  const { data: ourAgents, isLoading } = useGetAgentQuery();
-  const [ourAgent, setOurAgent] = useState([]);
-  useEffect(() => {
-    fetch("/Agents.json")
-      .then((res) => res.json())
-      .then((data) => setOurAgent(data));
-  }, []);
-  console.log(ourAgents);
+  const { data: ourAgents, isLoading } = useAllAgentQuery();
   return (
     <div className="my-container grid lg:grid-cols-4 md:grid-cols-3 grid-cols-1 gap-4 justify-between p-2">
-      {ourAgent.map((single) => (
+      {ourAgents.map((single) => (
         <div className=" border text-center p-2" key={single._id}>
           <div className="flex justify-center items-center">
             <img className="w-4/5 h-[150px]" src={single.image} alt="" />
