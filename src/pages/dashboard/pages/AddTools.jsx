@@ -4,9 +4,10 @@ import { useAddToolMutation, useGetToolsQuery } from "../../../redux/features/ba
 import ControlPages from "./ControlPages";
 
 const AddTools = () => {
+
   const { register, handleSubmit, reset } = useForm();
-  const [addedFilePost] = useAddToolMutation();
   const { data: toolsAndDriver, isLoading } = useGetToolsQuery();
+  const [addedFilePost] = useAddToolMutation();
   const onSubmit = (data) => {
     const post = {
       title: data.title,
@@ -24,6 +25,7 @@ const AddTools = () => {
     addedFilePost(post);
     swal("Good job!", "The post has been published!", "success");
   };
+
   return (
     <>
       <form onSubmit={handleSubmit(onSubmit)}>

@@ -69,8 +69,9 @@ const router = createBrowserRouter([
         element: <Blogs />,
       },
       {
-        path: "/details/:name",
+        path: "/details/:id",
         element: <BlogDetails />,
+        loader: ({ params }) => fetch(`https://o-gsmservice-server.vercel.app/blog-details/${params.id}`)
       },
       {
         path: "/user-request",

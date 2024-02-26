@@ -1,8 +1,11 @@
 import React from 'react';
+import { useLoaderData } from 'react-router-dom';
 
 const BlogDetails = () => {
+    const blogs = useLoaderData();
     return (
         <div className='my-container p-4 md:p-2'>
+            <h2 className='text-2xl font-semibold pt-4'>{blogs.title}</h2>
             <div className='grid md:grid-cols-3 grid-cols-1 items-center justify-between gap-6'>
                 <img src="https://gdsrom.com/media/products/thumbnails/2023/09/23/2-1695511274.png"
           alt="" />

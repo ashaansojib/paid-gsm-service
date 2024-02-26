@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 const Blog = ({ singleBlog }) => {
-  const { title } = singleBlog;
+  const { title, _id } = singleBlog;
   return (
     <div className="border p-4 mb-4 mx-2 md:flex justify-between items-center gap-6">
       <div className="w-2/4">
@@ -12,7 +12,7 @@ const Blog = ({ singleBlog }) => {
         />
       </div>
       <div>
-        <h2 className="text-2xl font-semibold hover:text-blue-500"><Link to={`/details/${title}`}>{title}</Link></h2>
+        <h2 className="text-2xl font-semibold hover:text-blue-500"><Link to={`/details/${_id}`}>{title}</Link></h2>
         <p className="p-2 text-gray-400 text-sm">
           10 July, 2024 | Author By AshaAnSojib
         </p>
@@ -22,7 +22,7 @@ const Blog = ({ singleBlog }) => {
           accusamus repellendus nulla consectetur amet minima voluptatum eos
           reprehenderit nihil.
         </p>
-        <Link to={`/details/${title}`} className="px-4 py-2 bg-green-500 text-white rounded-md mt-3 inline-block">Read More</Link>
+        <Link to={`/details/${_id}`} className="px-4 py-2 bg-green-500 text-white rounded-md mt-3 inline-block">Read More</Link>
       </div>
     </div>
   );

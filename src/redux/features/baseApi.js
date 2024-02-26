@@ -58,18 +58,17 @@ export const baseApi = createApi({
       }),
     }),
 
-    // posts for blog
-    // getBlogs: builder.query({
-    //   query: () => "blogs",
-    // }),
-    // addBlogs: builder.mutation({
-    //   query: (data) => ({
-    //     url: "add-blog",
-    //     method: "POST",
-    //     body: data,
-    //   }),
-    // }),
-
+    // posts for blog--------------------------------------
+    getBlogs: builder.query({
+      query: () => "blogs",
+    }),
+    addBlogs: builder.mutation({
+      query: (data) => ({
+        url: "add-blog",
+        method: "POST",
+        body: data,
+      }),
+    }),
 
     // agents apis
     // getAgent: builder.query({

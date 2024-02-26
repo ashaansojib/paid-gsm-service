@@ -1,6 +1,9 @@
 import React from 'react';
 
 const ControlPages = (tools) => {
+    const controlRemove = (id) =>{
+        console.log(id)
+    }
     return (
         <>
             <div className="md:flex justify-between items-center bg-slate-100 p-2">
@@ -42,7 +45,7 @@ const ControlPages = (tools) => {
                                 <td>
                                     <button className="btn btn-outline btn-xs mr-1">Edit</button>
                                     <button
-                                        onClick={() => handleDelatePost(data._id)}
+                                        onClick={() => controlRemove(data._id)}
                                         className="btn btn-outline btn-xs"
                                     >
                                         Delete
